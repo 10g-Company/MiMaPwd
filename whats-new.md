@@ -1,7 +1,3 @@
----
-layout: default
-title: What is New
----
 
 # What's New
 
