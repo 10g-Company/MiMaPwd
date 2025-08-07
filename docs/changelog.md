@@ -1,1 +1,1 @@
-{% include_relative whats-new.md %}
+--8<-- "whats-new.md"
