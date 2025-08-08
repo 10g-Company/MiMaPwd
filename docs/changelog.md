@@ -1,1 +1,5 @@
---8<-- "whats-new.md"
+---
+title: "hello"
+---
+
+# Hello World
