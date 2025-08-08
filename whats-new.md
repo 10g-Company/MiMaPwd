@@ -1,3 +1,6 @@
+---
+title: Changelog
+---
 
 # What's New
 
