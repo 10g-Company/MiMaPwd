@@ -18,3 +18,10 @@ jobs:
       - name: Copy changelog.md to docs folder
         run: |
           cp changelog.md docs/changelog.md
+
+      - name: Commit and push if changes were made
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/changelog.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update docs/changelog.md from root" && git push)
