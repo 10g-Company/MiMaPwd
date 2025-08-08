@@ -1,0 +1,20 @@
+name: Copy Changelog to Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'changelog.md'
+      - 'docs/**'
+
+jobs:
+  copy_changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy changelog.md to docs folder
+        run: |
+          cp changelog.md docs/changelog.md
