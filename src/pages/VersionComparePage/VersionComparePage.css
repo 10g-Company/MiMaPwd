@@ -1,0 +1,84 @@
+.label {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 15px;
+}
+
+.basic {
+    background-color: #ACACAC; /* Green */
+}
+
+.pro {
+    background-color: #0288D1; /* Blue */
+}
+
+.table-wrapper {
+    /* This is the key to centering */
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    /*width: 100%;*/
+    border-collapse: collapse;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.check::before {
+    content: '\2713'; /* Unicode for checkmark */
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.cross::before {
+    content: '\2715'; /* Unicode for multiplication sign (cross) */
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.feature-column {
+    /* This column will now take up the remaining space */
+    width: auto;
+}
+
+.comparison-column {
+    text-align: center;
+    /* Make these columns as small as possible based on their content */
+    width: 1%;
+    /*white-space: nowrap;*/
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.popup-trigger {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+    .popup-trigger:hover {
+        color: #0056b3;
+    }

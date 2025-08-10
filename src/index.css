@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #F0FFFF;
+    --primary-color-dark: #003153;
+    --page-background: #FFFFFF;
+    --page-background-alt: #f8f9fa;
+    --dark-gray: #343a40;
+    --dark-gray-text: #adb5bd;
+}
+
 /* CSS Reset and General Styles */
 * {
     margin: 0;
@@ -28,11 +37,16 @@ body {
     padding: 1rem 2rem;
     transition: background-color 0.3s ease;
     z-index: 1000;
+    background-color: var(--primary-color);
 }
 
     .header.scrolled {
-        background-color: #fff; /* Change this to your desired color */
+        background-color: var(--page-background);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header.scrolled-no-shadow {
+        background-color: var(--page-background);
     }
 
     .header .logo {
@@ -88,7 +102,7 @@ body {
 }
 
 #intro {
-    background-color: #f8f9fa; /* A light background for the intro section */
+    background-color: var(--primary-color); /* A light background for the intro section */
 }
 
     #intro h1 {
@@ -129,11 +143,12 @@ body {
 }
 
     .feature-section:nth-child(even) {
-        background-color: #f8f9fa;
+        background-color: var(--page-background);
     }
     /* --- Alternating Layout --- */
     .feature-section:nth-child(odd) {
         flex-direction: row-reverse;
+        background-color: var(--page-background-alt);
     }
 
 .feature-content {
@@ -166,7 +181,7 @@ body {
 
 /* --- Footer --- */
 .footer {
-    background-color: #343a40;
+    background-color: var(--dark-gray);
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -183,7 +198,7 @@ body {
 
     .footer-links a {
         text-decoration: none;
-        color: #adb5bd;
+        color: var(--dark-gray-text);
         transition: color 0.3s ease;
     }
 

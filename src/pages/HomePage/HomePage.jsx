@@ -21,8 +21,8 @@ function HomePage() {
                 <div className="feature-content">
                     <h2>Your Passwords, Only on Your Device - Never Online!</h2>
                     <p>
-                        Keep your passwords 100% offline & ultra-secure with <b>MiMaPwd</b>!
-                        No cloud storage, no servers—just military-grade encryption on your device.
+                        Keep your passwords 100% offline & ultra-secure with <b>MiMaPwd</b>!<br />
+                        No cloud storage, no servers - just military-grade encryption on your device. <br/>
                         Access logins fast, generate strong passwords, and enjoy zero online risks. Total privacy. Total control.
                     </p>
                 </div>

@@ -27,7 +27,10 @@ function Header() {
 
     return (
 
-        <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="main-header">
+        <header id="main-header" className={`header ${
+            isScrolled ? 'scrolled' : 
+            !isHomePage ? 'scrolled-no-shadow' : ''}
+        }`} >
 
             <Link to="/" className="logo-container">
                 <img src="images/logo.png" alt="App Logo" />
