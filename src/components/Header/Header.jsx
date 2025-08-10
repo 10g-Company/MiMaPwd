@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
 import useIsHomePage from '../../hooks/useIsHomePage';
 
 function Header() {
@@ -31,7 +30,7 @@ function Header() {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} id="main-header">
 
             <Link to="/" className="logo-container">
-                <img src={logo} alt="App Logo" />
+                <img src="images/logo.png" alt="App Logo" />
                 <span className="logo-text">MiMaPwd</span>
             </Link>
             {isHomePage && (

@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage/HomePage';
 import VersionComparePage from './pages/VersionComparePage/VersionComparePage';
 import Header from './components/Header/Header';
 import ScrollToTop from './behaviors/ScrollToTop';
-import logo from './assets/images/logo.png'; // Ensure you have a logo image
 
 function App() {
     useEffect(() => {
@@ -13,7 +12,7 @@ function App() {
 
     return (
         <>
-            <link rel="icon" href={logo} />
+            <link rel="icon" href="images/logo.png" />
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
             <ScrollToTop />
@@ -28,7 +27,7 @@ function App() {
                 <div className="footer-links">
                     <a href="#">About Us</a>
                     <Link to="/version-compare">Version Comparison</Link>
-                    <a href="whats-new.html">What's New</a>
+                    <a href="changelog.html">What's New</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms & Conditions</a>
                     <a href="#">Contact</a>

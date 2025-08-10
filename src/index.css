@@ -220,21 +220,3 @@ body {
         gap: 0.5rem;
     }
 }
-
-/* --- Markdown --- */
-.md-content {
-    padding: 20px;
-}
-
-    .md-content h1 {
-        margin-bottom: 0.5em;
-    }
-
-    .md-content ul {
-        list-style-type: disc;
-        padding-left: 2em;
-    }
-
-    .md-content li {
-        margin-bottom: 0.5em;
-    }
