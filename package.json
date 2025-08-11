@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "deploy": "gh-pages -d docs",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "postbuild": "copy docs\\index.html docs\\404.html"
   },
   "dependencies": {
     "react": "^19.1.1",
