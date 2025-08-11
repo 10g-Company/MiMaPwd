@@ -23,8 +23,8 @@ function VersionComparePage() {
 
     return (
         <>
-            <br />
-            <h1><span className="label basic">Basic</span> vs <span className="label pro">Pro</span></h1>
+            
+            <h1 className="top-header"><span className="label basic">Basic</span> vs <span className="label pro">Pro</span></h1>
 
             <div className="table-wrapper">
                 <table>

@@ -4,6 +4,10 @@
     border-radius: 15px;
 }
 
+.top-header{
+    margin-top: 0.3rem;
+}
+
 .basic {
     background-color: #ACACAC; /* Green */
 }
@@ -16,6 +20,7 @@
     /* This is the key to centering */
     display: flex;
     justify-content: center;
+    padding: 0 1rem;
 }
 
 table {
