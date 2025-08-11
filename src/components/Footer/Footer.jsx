@@ -1,0 +1,35 @@
+import React from 'react';
+import './Footer.css';
+import { Link, useLocation } from 'react-router-dom';
+
+/*
+ * 01 set hf=true in the URL to hide the footer 
+ */
+
+function Footer() {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+
+    // Get "hf" parameter from URL
+    const hideFooter = params.get('hf') === "true";
+
+    if (hideFooter) return null;
+
+    return (
+        <>
+            <footer className="footer">
+                <div className="footer-links">
+                    <a href="#">About Us</a>
+                    <Link to="/version-compare">Version Comparison</Link>
+                    <a href="changelog.html">What's New</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p>&copy; 2025 MiMaPwd. All rights reserved.</p>
+            </footer>
+        </>
+    );
+}
+
+export default Footer;

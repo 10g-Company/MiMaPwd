@@ -73,12 +73,3 @@ h1 {
     text-align: center;
 }
 
-.popup-trigger {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #007bff;
-}
-
-    .popup-trigger:hover {
-        color: #0056b3;
-    }

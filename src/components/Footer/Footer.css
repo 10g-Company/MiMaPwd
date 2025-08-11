@@ -1,0 +1,33 @@
+.footer {
+    background-color: var(--dark-gray);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    width: 100vw; /* Ensure full viewport width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+    .footer-links a {
+        text-decoration: none;
+        color: var(--dark-gray-text);
+        transition: color 0.3s ease;
+    }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

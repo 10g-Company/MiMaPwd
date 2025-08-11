@@ -16,7 +16,7 @@ function VersionComparePage() {
                 <br/>
                 <p>If you are over the 25 records limit, you can delete existing record to create a new one.</p>
                 <br/>
-                <p>To store more records without any limitations, consider upgrading to the Pro Version.</p>
+                <p>To store more records without any limitations, consider upgrading to the <span className="label pro">Pro</span> Version.</p>
             </>
         ));
     };
