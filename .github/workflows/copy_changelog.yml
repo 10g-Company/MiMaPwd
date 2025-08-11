@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'changelog.md'
-      - 'docs/**'
+      #- 'docs/**'
 
 jobs:
   copy-changelog:
