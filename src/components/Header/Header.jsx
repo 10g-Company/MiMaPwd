@@ -32,7 +32,7 @@ function Header() {
             !isHomePage ? 'scrolled-no-shadow' : ''}
         }`} >
 
-            <a href="/" className="logo-container">
+            <a href={`${import.meta.env.BASE_URL}`} className="logo-container">
                 <img src="images/logo.png" alt="App Logo" />
                 <span className="logo-text">MiMaPwd</span>
             </a>
