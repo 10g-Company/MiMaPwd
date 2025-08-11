@@ -9,7 +9,7 @@
     "build": "vite build",
     "deploy": "gh-pages -d docs",
     "predeploy": "npm run build",
-    "postbuild": "copy docs\\index.html docs\\404.html"
+    "postbuild": "copy docs\\index.html docs\\404.html && copy changelog.md docs\\"
   },
   "dependencies": {
     "react": "^19.1.1",
