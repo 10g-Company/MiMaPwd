@@ -32,10 +32,11 @@ function Header() {
             !isHomePage ? 'scrolled-no-shadow' : ''}
         }`} >
 
-            <Link to="/" className="logo-container">
+            <a href="/" className="logo-container">
                 <img src="images/logo.png" alt="App Logo" />
                 <span className="logo-text">MiMaPwd</span>
-            </Link>
+            </a>
+
             {isHomePage && (
                 <nav>
                     <ul className="nav-links">
