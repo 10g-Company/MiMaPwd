@@ -1,7 +1,3 @@
----
-title: Changelog
----
-
 # <u>What's New</u>
 
 ### Version: 0.0.1
