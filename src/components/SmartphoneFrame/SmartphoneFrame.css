@@ -1,0 +1,47 @@
+.smartphone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.smartphone-frame {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 30px; /* Slightly less rounded corners */
+    padding: 8px; /* Thinner bezel */
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);*/
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.smartphone-notch-pill {
+    width: 12px; /* Width of the pill-shaped notch */
+    height: 12px; /* Height of the pill-shaped notch */
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.smartphone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.smartphone-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Use cover to fill the screen */
+    display: block;
+}

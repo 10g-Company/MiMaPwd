@@ -137,7 +137,7 @@ body {
 .feature-section {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     padding: 4rem 2rem;
     border-bottom: 1px solid #eee;
 }
@@ -179,6 +179,12 @@ body {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
+.feature-phone {
+    display: flex;
+    justify-content: center;
+    margin: 5px 30px;
+}
+
 /* --- Popup --- */
 .popup-trigger {
     cursor: pointer;
@@ -212,5 +218,9 @@ body {
     .feature-image {
         /*margin-top: 1rem;*/
         width: 70%;
+    }
+
+    .feature-phone{
+        margin: 0px
     }
 }

@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import cloud_off_outline from '../../assets/images/cloud-off-outline.svg';
+import SmartphoneFrame from '../../components/SmartphoneFrame/SmartphoneFrame';
+import screenshot1 from '../../assets/images/dianhuo-home.png';
 
 function HomePage() {
     useEffect(() => {
@@ -29,9 +31,10 @@ function HomePage() {
             </section>
 
             <section className="feature-section">
-                <div className="feature-image">
-                    <img src="https://via.placeholder.com/400x800" alt="Feature 1 Screenshot" />
+                <div className="feature-phone">
+                    <SmartphoneFrame media={screenshot1} height="500px" />
                 </div>
+
                 <div className="feature-content">
                     <h2>Secure and Encrypted Vault</h2>
                     <p>Keep your passwords, credit card information, and other sensitive data protected with industry-leading encryption. Your data is only accessible to you.</p>
