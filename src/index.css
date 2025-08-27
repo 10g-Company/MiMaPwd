@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary-color: #F0FFFF;
     --primary-color-dark: #003153;
     --page-background: #FFFFFF;
@@ -101,19 +101,32 @@ body {
     flex-direction: column;
 }
 
+    .section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+        color: #222;
+        line-height: 1.2;
+    }
+
+    .section p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin-bottom: 2rem;
+        color: #666;
+    }
+
 #intro {
     background-color: var(--primary-color); /* A light background for the intro section */
 }
 
     #intro h1 {
         font-size: 3rem;
-        margin-bottom: 1rem;
         color: #222;
     }
 
     #intro p {
         font-size: 1.2rem;
-        max-width: 600px;
+        max-width: 550px;
         margin-bottom: 2rem;
         color: #666;
     }
@@ -138,17 +151,17 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 4rem 2rem;
+    padding: 4rem;
     border-bottom: 1px solid #eee;
 }
 
     .feature-section:nth-child(even) {
-        background-color: var(--page-background);
+        /*background-color: var(--page-background);*/
     }
     /* --- Alternating Layout --- */
     .feature-section:nth-child(odd) {
         flex-direction: row-reverse;
-        background-color: var(--page-background-alt);
+        /*background-color: var(--page-background-alt);*/
     }
 
 .feature-content {
@@ -157,13 +170,15 @@ body {
 
     .feature-content h2 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
         color: #222;
+        line-height:1.2;
     }
 
     .feature-content p {
         font-size: 1.1rem;
         color: #555;
+        margin-bottom: 0.8rem;
     }
 
 .feature-image {
@@ -195,6 +210,25 @@ body {
     .popup-trigger:hover {
         color: #0056b3;
     }
+
+/* --- UL custom list ---*/
+ul.check-list {
+    list-style: none; /* Hides default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+    ul.check-list li {
+        display: inline-block;
+        text-align: center; /* Centers the content of the <li> */
+        margin: 10px 0; /* Adds some spacing between items */
+    }
+
+        ul.check-list li::before {
+            content: "✅";
+            margin-right: 5px;
+        }
+
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {

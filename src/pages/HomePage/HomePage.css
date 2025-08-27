@@ -1,0 +1,8 @@
+﻿section:nth-child(even) {
+    background-color: var(--page-background);
+}
+
+section:nth-child(odd) {
+    background-color: var(--page-background-alt);
+}
+

@@ -1,7 +1,7 @@
 .footer {
     background-color: var(--dark-gray);
     color: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     width: 100vw; /* Ensure full viewport width */
     box-sizing: border-box; /* Include padding in the width calculation */
