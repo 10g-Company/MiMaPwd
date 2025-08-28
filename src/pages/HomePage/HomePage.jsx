@@ -12,12 +12,17 @@ function HomePage() {
 
     return (
         <>
-            <section className="section" id="intro">
-                <h1>Simplify Your Digital Life</h1>
-                <p>
-                    <b>MiMaPwd</b> is a secure, privacy-first password manager that keeps all your credentials safe ONLY on Your Device.
-                </p>
-                <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
+            <section className="section feature-section" id="intro">
+                <div className="feature-phone">
+                    <SmartphoneFrame media={screenshot1} />
+                </div>
+                <div className="feature-content">
+                    <h1>Simplify Your Digital Life</h1>
+                    <p>
+                        <b>MiMaPwd</b> is a secure, privacy-first password manager that keeps all your credentials safe ONLY on Your Device.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
+                </div>
             </section>
             
             <section className="section" id="intro2">
@@ -54,7 +59,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
 
                 <div className="feature-content">
@@ -71,7 +76,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
                     <h2>👆 Biometric Login</h2>
@@ -83,7 +88,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
                     <h2>💾 Backup & Restore with Protection</h2>
@@ -97,7 +102,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
                     <h2>⏳ Auto-Lock for Safety</h2>
@@ -110,7 +115,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
                     <h2>💣 Self-Destruct Option</h2>
@@ -123,7 +128,7 @@ function HomePage() {
 
             <section className="feature-section">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} height="500px" />
+                    <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
                     <h2>🖼️ More Than Text</h2>

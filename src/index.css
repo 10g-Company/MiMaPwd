@@ -15,7 +15,7 @@
 }
 
 html {
-    scroll-behavior: smooth;  /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 body {
@@ -151,7 +151,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 4rem;
+    padding: 3rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -172,7 +172,7 @@ body {
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
         color: #222;
-        line-height:1.2;
+        line-height: 1.2;
     }
 
     .feature-content p {
@@ -241,20 +241,24 @@ ul.check-list {
     }
 
     .feature-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
+        padding: 2rem;
     }
 
         .feature-section:nth-child(odd) {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
 
     .feature-image {
-        /*margin-top: 1rem;*/
         width: 70%;
     }
 
-    .feature-phone{
-        margin: 0px
+    .feature-content {
+        flex: 0;
+    }
+
+    .feature-phone {
+        margin: 0px;
     }
 }

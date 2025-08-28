@@ -14,6 +14,11 @@ const SmartphoneFrame = ({ media, height }) => {
         <div className="smartphone-container" style={{ height: height }}>
             <div className="smartphone-frame">
                 <div className="smartphone-notch-pill"></div>
+
+                {/*<div className="smartphone-volume-up"></div>*/}
+                {/*<div className="smartphone-volume-down"></div>*/}
+                {/*<div className="smartphone-power-button"></div>*/}
+
                 <div className="smartphone-screen">
                     {renderMedia()}
                 </div>

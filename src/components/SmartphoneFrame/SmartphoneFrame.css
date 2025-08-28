@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 600px; /* default size */
 }
 
 .smartphone-frame {
@@ -10,12 +11,11 @@
     height: 100%;
     background-color: #000;
     border-radius: 30px; /* Slightly less rounded corners */
-    padding: 8px; /* Thinner bezel */
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);*/
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 30;
 }
 
 .smartphone-notch-pill {
@@ -44,4 +44,26 @@
     height: 100%;
     object-fit: cover; /* Use cover to fill the screen */
     display: block;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .smartphone-container {
+        height: 50vh;
+    }
+
+    .smartphone-frame {
+        border-radius: 20px;
+    }
+
+    .smartphone-notch-pill {
+        width: 10px; /* Width of the pill-shaped notch */
+        height: 10px; /* Height of the pill-shaped notch */
+        top: 8px;
+    }
+
+    .smartphone-media{
+        padding: 6px;
+    }
 }
