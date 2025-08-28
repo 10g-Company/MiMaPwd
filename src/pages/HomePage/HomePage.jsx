@@ -31,6 +31,7 @@ function HomePage() {
                     <li>In a world of data breaches and cloud leaks, true security means keeping your secrets to yourself.</li>
                     <li><b>MiMaPwd</b> stores everything only on you device, encrypted with military-grade algorithms.</li>
                     <li>No clouds, No servers, No leaks. Just peace of mind.</li>
+                    <li>No monthly subscription fee. Just a one-time purchase - Simple. Affordable. No hidden costs.</li>
                 </ul>
                 <br/><br/>
                 <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
