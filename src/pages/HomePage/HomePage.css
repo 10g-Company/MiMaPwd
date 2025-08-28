@@ -6,3 +6,6 @@ section:nth-child(odd) {
     background-color: var(--page-background-alt);
 }
 
+.feature-section {
+    min-height: 100vh;
+}

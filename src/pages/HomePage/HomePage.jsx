@@ -27,13 +27,12 @@ function HomePage() {
             
             <section className="section" id="intro2">
                 <h1>Why Choose MiMaPwd ?</h1>
-                <p>
-                    <ul className="check-list">
-                        <li>In a world of data breaches and cloud leaks, true security means keeping your secrets to yourself.</li>
-                        <li><b>MiMaPwd</b> stores everything only on you device, encrypted with military-grade algorithms.</li>
-                        <li>No clouds, No servers, No leaks. Just peace of mind.</li>
-                    </ul>
-                </p>
+                <ul className="check-list">
+                    <li>In a world of data breaches and cloud leaks, true security means keeping your secrets to yourself.</li>
+                    <li><b>MiMaPwd</b> stores everything only on you device, encrypted with military-grade algorithms.</li>
+                    <li>No clouds, No servers, No leaks. Just peace of mind.</li>
+                </ul>
+                <br/><br/>
                 <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
 
@@ -43,16 +42,16 @@ function HomePage() {
                 </div>
                 <div className="feature-content">
                     <h2>🔐 Your Data Never Leaves Your Device</h2>
-                    <p>
-                        In a world of data breaches, your privacy is paramount.
-                    </p>
-                    <p>
-                        Unlike other password managers that sync to the cloud, <b>MiMaPwd</b> stores everything exclusively on your device.
-                    </p>
-                    <p>
-                        We have no servers, which means we can't see, share, or lose your data.
-                        Your digital life remains completely private, just as it should be.
-                    </p>
+                    <ul className="check-list">
+                        <li>In a world of data breaches, your privacy is paramount.</li>
+                        <li>
+                            Unlike other password managers that sync to the cloud, <b>MiMaPwd</b> stores everything exclusively on your device.
+                        </li>
+                        <li>
+                            We have no servers, which means we can't see, share, or lose your data.
+                            Your digital life remains completely private, just as it should be.
+                        </li>
+                    </ul>
                 </div>
 
             </section>
@@ -64,13 +63,13 @@ function HomePage() {
 
                 <div className="feature-content">
                     <h2>🛡️ Military-Grade, Multi-Layered Security</h2>
-                    <p>
-                        Your entire vault is stored in a 256-bit AES encrypted database.
-                    </p>
-                    <p>
-                        Sensitive data like passwords and images are further encrypted individually for an extra layer of protection. 
-                        It's like putting a safe inside a safe.
-                    </p>
+                    <ul className="check-list">
+                        <li>Your entire vault is stored in a 256-bit AES encrypted database.</li>
+                        <li>
+                            Sensitive data like passwords and images are further encrypted individually for an extra layer of protection.
+                            It's like putting a safe inside a safe.
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -92,11 +91,13 @@ function HomePage() {
                 </div>
                 <div className="feature-content">
                     <h2>💾 Backup & Restore with Protection</h2>
-                    <p>Create secure backups of your data to restore later.</p>
-                    <p>Move your data between devices without ever exposing it to the internet.</p>
-                    <p>
-                        Backups are password-protected, so even if stolen, they’re useless without your unique password to restore it.
-                    </p>
+                    <ul className="check-list">
+                        <li>Create secure backups of your data to restore later.</li>
+                        <li>Move your data between devices without ever exposing it to the internet.</li>
+                        <li>
+                            Backups are password-protected, so even if stolen, they’re useless without your unique password to restore it.
+                        </li>
+                    </ul>
                 </div>
             </section>
 
@@ -119,10 +120,11 @@ function HomePage() {
                 </div>
                 <div className="feature-content">
                     <h2>💣 Self-Destruct Option</h2>
-                    <p>
-                        Worried about brute force attacks? Worried about someone forcing you to open your vault?
-                        Set the number of wrong password attempts before the app wipes all your data automatically.
-                    </p>
+                    <ul className="check-list">
+                        <li>Worried about brute force attacks?</li>
+                        <li>Worried about someone forcing you to open your vault?</li>
+                        <li>Set the number of wrong password attempts before the app wipes all your data automatically.</li>
+                    </ul>
                 </div>
             </section>
 
@@ -141,20 +143,25 @@ function HomePage() {
 
             <section className="section">
                 <h1>Ready to Take Full Control of Your Security ?</h1>
-                <p>
-                    Don't trust your most sensitive data to someone else's server or cloud.<br /><br />
-                    Download <b>MiMaPwd</b> today and experience the freedom of a truly private password manager.<br /><br />
-                    One time upgrade to <b>Pro</b> version to unleash the full power of MiMaPwd.<br />
-                    Simple. Affordable. No hidden costs.{' '}
-                    <span style={{ fontSize: "0.9rem" }}>(see <Link to="/version-compare">Version Comparison</Link>)</span>
-                </p>
+                <ul className="check-list">
+                    <li>Don't trust your most sensitive data to someone else's server or cloud.</li>
+                    <li>Download <b>MiMaPwd</b> today and experience the freedom of a truly private password manager.</li>
+                    <li>One time upgrade to <b>Pro</b> version to unleash the full power of MiMaPwd.</li>
+                    <li>
+                        Simple. Affordable. No hidden costs. {' '}
+                        <span style={{ fontSize: "0.9rem" }}>(see <Link to="/version-compare">Version Comparison</Link>)</span>
+                    </li>
+                </ul>
                 <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
             
             <section className="section" id="help">
                 <h2>Get Started</h2>
-                <p>Visit our <a href="tutorial/01getstarted.html">tutorial</a> to learn how to use the app</p>
+                <p>Visit our <Link to="/get-started">tutorial</Link> to learn how to use the app</p>
                 <br /><br />
+                <h2>FAQ</h2>
+                <p>Check out some <Link to="/faq">frequently asked questions</Link>.</p>
+                <br/><br/>
                 <h2>Need Help?</h2>
                 <p>
                     If you have any questions or are running into issues or want to request new features,

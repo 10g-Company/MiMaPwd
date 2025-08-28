@@ -16,11 +16,12 @@
 
 html {
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    font-size: 16px; /* rem to this size */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333;
     overflow-x: hidden; /* This prevents horizontal scrolling */
 }
@@ -137,7 +138,7 @@ body {
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 1.5rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -219,9 +220,11 @@ ul.check-list {
 }
 
     ul.check-list li {
-        display: inline-block;
-        text-align: center; /* Centers the content of the <li> */
-        margin: 10px 0; /* Adds some spacing between items */
+        display: block;
+        font-size:1.1rem;
+        color:#555;
+        text-align: left;
+        margin: 2rem 1rem;
     }
 
         ul.check-list li::before {
@@ -232,8 +235,12 @@ ul.check-list {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+
     .header {
-        padding: 1rem !important;
+        padding: 1rem 2rem 1rem 1rem !important;
     }
 
     .nav-links {
@@ -243,7 +250,7 @@ ul.check-list {
     .feature-section {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 
         .feature-section:nth-child(odd) {
