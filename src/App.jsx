@@ -4,9 +4,11 @@ import HomePage from './pages/HomePage/HomePage';
 import VersionComparePage from './pages/VersionComparePage/VersionComparePage';
 import FaqPagePage from './pages/FaqPage/FaqPage';
 import TutorialPage from './pages/TutorialPage/TutorialPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './behaviors/ScrollToTop';
+
 
 function App() {
     useEffect(() => {
@@ -26,6 +28,7 @@ function App() {
                 <Route path="/version-compare" element={<VersionComparePage />} />
                 <Route path="/faq" element={<FaqPagePage />} />
                 <Route path="/get-started" element={<TutorialPage />} />
+                <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 {/* Add more routes as needed */}
             </Routes>
 

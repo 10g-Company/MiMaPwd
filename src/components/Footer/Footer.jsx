@@ -19,12 +19,13 @@ function Footer() {
         <>
             <footer className="footer">
                 <div className="footer-links">
-                    <a href="#">About Us</a>
+                    <Link to="/faq#about-us">About Us</Link>
                     <Link to="/version-compare">Version Comparison</Link>
                     <a href="changelog.html">What's New</a>
-                    <a href="#">Privacy Policy</a>
+                    {/*<a href="#">Privacy Policy</a>*/}
+                    <Link to="/privacy">Privacy Policy</Link>
                     <a href="#">Terms & Conditions</a>
-                    <a href="#">Contact</a>
+                    <a href="#">Contact Us</a>
                 </div>
                 <p>&copy; 2025 MiMaPwd. All rights reserved.</p>
             </footer>

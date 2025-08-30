@@ -26,6 +26,11 @@ body {
     overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 
+h1.page-title{
+    text-align:center;
+    margin: 1rem 2rem;
+}
+
 /* --- Header Navigation --- */
 .header {
     position: sticky;
@@ -222,7 +227,7 @@ ul.shield-list{
 }
 
     ul.check-list li,
-    ul.shield-list li {
+    ul.shield-list li{
         display: block;
         /*font-size:1.1rem;*/
         color: #555;
@@ -240,8 +245,22 @@ ul.shield-list{
             margin-right: 5px;
         }
 
+        /*ul.bullet-list li::before {
+            content: "●";
+            margin-right: 5px;
+        }*/
+
+ul.bullet-list, ol.bullet-list {
+    /*padding: 0 2rem;*/
+}
+
+    ul.bullet-list li, ol.bullet-list li {
+        color: #555;
+        margin: 0.8rem 1rem;
+    }
+
 .react-icons {
-    vertical-align: sub;
+    vertical-align: text-bottom;
 }
 
 /* --- Responsive Design --- */

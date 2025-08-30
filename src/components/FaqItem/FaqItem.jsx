@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './FaqItem.css';
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const FaqItem = ({id, question, children }) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    // Open automatically if page loads or navigates with a hash
+    useEffect(() => {
+        if (window.location.hash === `#${id}`) {
+            setIsOpen(true);
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    }, [id]);
 
     return (
         <div id={id} className="faq-item">

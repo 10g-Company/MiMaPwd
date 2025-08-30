@@ -14,7 +14,7 @@ function FaqPagePage() {
 
     return (
         <>
-            <h1 style={{ textAlign: 'center', margin: '1rem 2rem' }}>Frequently Asked Questions</h1>
+            <h1 className="page-title">Frequently Asked Questions</h1>
 
             <section className="category">
                 <h2>Security & Privacy</h2>
@@ -217,7 +217,7 @@ function FaqPagePage() {
                     </p>
                 </FaqItem>
 
-                <FaqItem question="Who is behind MiMaPwd? Can I trust you?">
+                <FaqItem id="about-us" question="Who is behind MiMaPwd? Can I trust you?">
                     <p>
                         MiMaPwd is developed by <strong>10g Company Pte. Ltd.</strong> We are a Singapore-based company with a small team focusing on
                         building mobile app. Our trust is built on transparency and fair pricing model. Our app's functionality reflects
