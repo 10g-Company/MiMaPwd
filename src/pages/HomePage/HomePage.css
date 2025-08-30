@@ -1,10 +1,14 @@
-﻿section:nth-child(even) {
-    background-color: var(--page-background);
+﻿.altcolor {
+    font-size: 1.1rem;
 }
 
-section:nth-child(odd) {
-    background-color: var(--page-background-alt);
-}
+    .altcolor:nth-child(even) {
+        background-color: var(--page-background);
+    }
+
+    .altcolor:nth-child(odd) {
+        background-color: var(--page-background-alt);
+    }
 
 .feature-section {
     min-height: 100vh;

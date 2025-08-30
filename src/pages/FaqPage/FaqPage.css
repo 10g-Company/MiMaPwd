@@ -1,0 +1,21 @@
+.category{
+    padding: 1rem 2rem;
+}
+
+.faq-item{
+    margin: 1rem;
+}
+
+.faq-question{
+    /*font-size: 1.1rem;*/
+}
+
+ul.shield-list li{
+    margin: 1rem;
+}
+
+.react-icons{
+    margin: 0 0.5em 0 0;
+    height: 1.4em;
+    width: 1.4em;
+}

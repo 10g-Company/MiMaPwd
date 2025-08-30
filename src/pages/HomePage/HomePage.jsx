@@ -21,11 +21,12 @@ function HomePage() {
                     <p>
                         <b>MiMaPwd</b> is a secure, privacy-first password manager that keeps all your credentials safe ONLY on Your Device.
                     </p>
+                    <br/>
                     <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
                 </div>
             </section>
             
-            <section className="section" id="intro2">
+            <section className="section altcolor" id="intro2">
                 <h1>Why Choose MiMaPwd ?</h1>
                 <ul className="check-list">
                     <li>In a world of data breaches and cloud leaks, true security means keeping your secrets to yourself.</li>
@@ -37,7 +38,7 @@ function HomePage() {
                 <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
 
-            <section className="feature-section" id="features">
+            <section className="feature-section altcolor" id="features">
                 <div className="feature-image">
                     <img src={cloud_off_outline} alt="Feature 1 Screenshot" />
                 </div>
@@ -57,7 +58,7 @@ function HomePage() {
 
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -74,7 +75,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -86,7 +87,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -102,7 +103,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -115,7 +116,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -129,7 +130,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="feature-section">
+            <section className="feature-section altcolor">
                 <div className="feature-phone">
                     <SmartphoneFrame media={screenshot1} />
                 </div>
@@ -142,7 +143,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="section">
+            <section className="section altcolor">
                 <h1>Ready to Take Full Control of Your Security ?</h1>
                 <ul className="check-list">
                     <li>Don't trust your most sensitive data to someone else's server or cloud.</li>
@@ -153,10 +154,12 @@ function HomePage() {
                         <span style={{ fontSize: "0.9rem" }}>(see <Link to="/version-compare">Version Comparison</Link>)</span>
                     </li>
                 </ul>
+                <br />
+                <br/>
                 <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
             
-            <section className="section" id="help">
+            <section className="section altcolor" id="help">
                 <h2>Get Started</h2>
                 <p>Visit our <Link to="/get-started">tutorial</Link> to learn how to use the app</p>
                 <br /><br />

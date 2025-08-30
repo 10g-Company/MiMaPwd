@@ -24,7 +24,7 @@ function Header() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    
     return (
 
         <header id="main-header" className={`header ${
