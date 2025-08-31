@@ -5,9 +5,11 @@ import VersionComparePage from './pages/VersionComparePage/VersionComparePage';
 import FaqPagePage from './pages/FaqPage/FaqPage';
 import TutorialPage from './pages/TutorialPage/TutorialPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import TnCPage from './pages/TnCPage/TnCPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './behaviors/ScrollToTop';
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
                 <Route path="/faq" element={<FaqPagePage />} />
                 <Route path="/get-started" element={<TutorialPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                <Route path="/tnc" element={<TnCPage />} />
                 {/* Add more routes as needed */}
             </Routes>
 
