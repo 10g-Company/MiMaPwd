@@ -25,7 +25,7 @@ function Footer() {
                     {/*<a href="#">Privacy Policy</a>*/}
                     <Link to="/privacy">Privacy Policy</Link>
                     <Link to="/tnc">Terms & Conditions</Link>
-                    <a href="#">Contact Us</a>
+                    <Link to="/#help">Contact Us</Link>
                 </div>
                 <p>&copy; 2025 MiMaPwd. All rights reserved.</p>
             </footer>

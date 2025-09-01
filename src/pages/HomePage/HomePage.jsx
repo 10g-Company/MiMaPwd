@@ -169,7 +169,7 @@ function HomePage() {
                 <h2>Need Help?</h2>
                 <p>
                     If you have any questions or are running into issues or want to request new features,
-                    please visit our <a href="https://github.com/10g-Company/MiMaPwd/issues" target="_blank">support page</a>
+                    please visit our <a href="https://github.com/10g-Company/MiMaPwd/issues" target="_blank">forum</a>
                 </p>
                 <br /><br />
                 <h2>Contact Us?</h2>

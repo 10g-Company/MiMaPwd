@@ -10,8 +10,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './behaviors/ScrollToTop';
 
-
-
 function App() {
     useEffect(() => {
         document.title = "MiMaPwd";
