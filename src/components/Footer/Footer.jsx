@@ -24,7 +24,7 @@ function Footer() {
                     <a href="changelog.html">What's New</a>
                     {/*<a href="#">Privacy Policy</a>*/}
                     <Link to="/privacy">Privacy Policy</Link>
-                    <a href="#">Terms & Conditions</a>
+                    <Link to="/tnc">Terms & Conditions</Link>
                     <a href="#">Contact Us</a>
                 </div>
                 <p>&copy; 2025 MiMaPwd. All rights reserved.</p>

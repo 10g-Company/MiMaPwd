@@ -13,3 +13,7 @@
 .feature-section {
     min-height: 100vh;
 }
+
+ul.check-list{
+    gap: 1.2em;
+}
