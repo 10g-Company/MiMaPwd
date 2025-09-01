@@ -341,7 +341,7 @@ ol.bullet-list {
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     html{
-        font-size: 14px;
+        /*font-size: 14px;*/
     }
 
     .header {
