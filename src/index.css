@@ -33,6 +33,7 @@ h1.page-title{
 
 .page-body {
     padding: 1rem 2rem 3rem 2rem;
+    font-size: 0.95rem;
 }
 
 .h3-text{
@@ -373,5 +374,9 @@ ol.bullet-list {
 
     .feature-phone {
         margin: 0px;
+    }
+
+    .page-body {
+        font-size: 1rem;
     }
 }
