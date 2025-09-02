@@ -108,6 +108,23 @@ function HomePage() {
                     <SmartphoneFrame media={screenshot1} />
                 </div>
                 <div className="feature-content">
+                    <h2>🔄 Auto Backup</h2>
+                    <p>
+                        Never worry about forgetting a backup. Every time you save or update a record, MiMaPwd automatically creates a
+                        secure, password-protected backup in the background.
+                    </p>
+                    <ul className="check-list">
+                        <li>Peace of mind: Always have a recent copy.</li>
+                        <li>Security intact: Backups stay encrypted, protected by your master password.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className="feature-section altcolor">
+                <div className="feature-phone">
+                    <SmartphoneFrame media={screenshot1} />
+                </div>
+                <div className="feature-content">
                     <h2>⏳ Auto-Lock for Safety</h2>
                     <p>
                         Stay secure even when idle. Choose an auto-lock timer, and <b>MiMaPwd</b> will re-lock after inactivity.

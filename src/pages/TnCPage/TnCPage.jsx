@@ -169,7 +169,7 @@ function TnCPage() {
                             <ol className="alpha-list">
                                 <li>
                                     You may terminate this agreement at any time by uninstalling the App. Uninstalling the App will delete all
-                                    locally stored Content (not including your manual backup).
+                                    locally stored Content (not including your auto/manual backup files).
                                 </li>
                                 <li>
                                     We reserve the right to terminate or suspend your access to the App (e.g., remove it from Google Play) if you
