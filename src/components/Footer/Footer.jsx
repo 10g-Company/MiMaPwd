@@ -22,7 +22,7 @@ function Footer() {
                     <Link to="/faq#about-us">About Us</Link>
                     <Link to="/version-compare">Version Comparison</Link>
                     <a href="changelog.html">What's New</a>
-                    {/*<a href="#">Privacy Policy</a>*/}
+                    <Link to="/faq">FAQ</Link>
                     <Link to="/privacy">Privacy Policy</Link>
                     <Link to="/tnc">Terms & Conditions</Link>
                     <Link to="/#help">Contact Us</Link>

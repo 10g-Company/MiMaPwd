@@ -16,7 +16,9 @@
 }
 
 .faq-icon {
-    font-size: 1.2rem;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
     cursor: pointer;
     margin: 0 0 0 1rem;
 }

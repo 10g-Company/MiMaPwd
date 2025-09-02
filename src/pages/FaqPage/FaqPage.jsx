@@ -150,7 +150,7 @@ function FaqPagePage() {
 
                 <FaqItem question="What encryption standards does MiMaPwd use?">
                     <p>MiMaPwd employs:</p>
-                    <ul className="shield-list">
+                    <ul className="shield-list identlvl1">
                         <li>AES-256 encryption for the entire database</li>
                         <li>PBKDF2 with high number of iterations to derive keys</li>
                         <li>HMAC-SHA512 for integrity checks</li>
@@ -172,6 +172,23 @@ function FaqPagePage() {
                         to view any online help or to raise issue. If you don't need those, you can disable/remove the Internet permission.
                     </p>
                 </FaqItem>
+
+                <FaqItem question="Why does the app need Camera permission?">
+                    <p>
+                        This permission is needed if you want add images or icon to your record using your camera. If you don't need those, 
+                        you can disable/remove the Camera permission.
+                    </p>
+                </FaqItem>
+
+                <FaqItem question="Why does the app need Files and media permission?">
+                    <p>
+                        This permission is needed if you want to use an existing image as your record's icon, or add an existing image 
+                        to your record.
+                    </p>
+                    <p>
+                        In addition, this permission is required to store your backup file.
+                    </p>
+                </FaqItem>
             </section>
 
             <section className="category">
@@ -184,7 +201,7 @@ function FaqPagePage() {
                         through cloud syncing, this also creates a central target for hackers. Our key differentiators are:
                     </p>
                     <br />
-                    <div style={{padding: '0 1.5rem'}}>
+                    <div className="identlvl1">
                         <p>
                             <MdCloudOff className="react-icons" color='red' />
                             No cloud = no leaks from hacks on third-party servers.

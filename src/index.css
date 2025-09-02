@@ -236,7 +236,7 @@ ol.alpha-list {
     list-style: none; /* Hides default bullets */
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 0.7em;
     margin-top: 0.5em;
 }
 
@@ -318,7 +318,7 @@ ol.alpha-list > li::before {
     }
 
     .header {
-        padding: 1rem 2rem 1rem 1rem !important;
+        padding: 1rem 1.5rem 1rem 1rem !important;
     }
 
     .nav-links {

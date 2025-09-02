@@ -1,9 +1,13 @@
-.category{
+.category {
     padding: 1rem 2rem;
 }
 
-.faq-item{
-    margin: 1rem;
+    .category h2 {
+        margin-bottom: 0.5rem;
+    }
+
+.faq-item {
+    /*margin: 1rem;*/
 }
 
 .faq-question{
@@ -11,7 +15,7 @@
 }
 
 ul.shield-list li{
-    margin: 1rem;
+    /*margin: 1rem;*/
 }
 
 .react-icons{
