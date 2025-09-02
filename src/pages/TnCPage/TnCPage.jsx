@@ -17,7 +17,7 @@ function TnCPage() {
                 </p>
                 <br />
                 
-                <ol className="number-list h3-text" style={{gap:'2em'}}>
+                <ol className="number-list h3-text" style={{gap:'2em', marginLeft:'-10px'}}>
                     <li>
                         Introduction
                         <div className="h3-content">

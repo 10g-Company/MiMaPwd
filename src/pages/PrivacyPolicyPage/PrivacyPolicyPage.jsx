@@ -39,7 +39,7 @@ function PrivacyPolicyPage() {
                 <hr />
                 <br />
 
-                <ol className="number-list h3-text" style={{gap:'2em'}}>
+                <ol className="number-list h3-text" style={{ gap: '2em', marginLeft:'-10px'}}>
                     <li>
                         What Information Do We Collect?
                         <div className="h3-content">
