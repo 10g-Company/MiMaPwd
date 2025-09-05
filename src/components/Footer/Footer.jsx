@@ -27,7 +27,8 @@ function Footer() {
                     <Link to="/tnc">Terms & Conditions</Link>
                     <Link to="/#help">Contact Us</Link>
                 </div>
-                <p>&copy; 2025 MiMaPwd. All rights reserved.</p>
+                <p className="trademark">&copy; 2025 10g Company Pte. Ltd. All rights reserved.</p>
+                <p className="trademark">MiMaPwd&#8482; is a trademark of 10g Company Pte. Ltd.</p>
             </footer>
         </>
     );
