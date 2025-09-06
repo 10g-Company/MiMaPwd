@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useIsHomePage from '../../hooks/useIsHomePage';
 
+/*
+ * 01 set hh=true in the URL to hide the header 
+ */
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -24,7 +27,15 @@ function Header() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
+
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+
+    // Get "hf" parameter from URL
+    const hideHeader = params.get('hh') === "true";
+
+    if (hideHeader) return null;
+
     return (
 
         <header id="main-header" className={`header ${
