@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './VersionComparePage.css';
 import { usePopup } from '../../behaviors/PopupContext';
+import { MdLocalOffer } from "react-icons/md";
 
 function VersionComparePage() {
     useEffect(() => {
@@ -23,7 +24,13 @@ function VersionComparePage() {
 
     return (
         <>
-            
+
+            <div className="animated-banner">
+                <span className="offer-text"><MdLocalOffer className="offer-icon" /> Special Offer!</span>
+                <span className="original-price">SGD$19</span>
+                <span className="new-price">Now SGD$12</span>
+            </div>
+
             <h1 className="top-header"><span className="label basic">Basic</span> vs <span className="label pro">Pro</span></h1>
 
             <div className="table-wrapper">
@@ -44,17 +51,47 @@ function VersionComparePage() {
                             <td className="comparison-column">Unlimited records</td>
                         </tr>
                         <tr>
+                            <td>Data Only on Device</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
                             <td>Database password protected</td>
                             <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
                         <tr>
-                            <td>Advanced 2FA</td>
-                            <td className="cross comparison-column"></td>
+                            <td>Multi-layered security</td>
+                            <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
                         <tr>
                             <td>Sensitive Data Encryption</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
+                            <td>Biometric Login</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
+                            <td>Backup & Restore with Protection</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
+                            <td>Auto Backup</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
+                            <td>Auto-Lock</td>
+                            <td className="check comparison-column"></td>
+                            <td className="check comparison-column"></td>
+                        </tr>
+                        <tr>
+                            <td>Self-Destruct Protection</td>
                             <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
@@ -64,29 +101,18 @@ function VersionComparePage() {
                             <td className="check comparison-column"></td>
                         </tr>
                         <tr>
-                            <td>Login Brute force protection</td>
-                            <td className="cross comparison-column"></td>
-                            <td className="check comparison-column"></td>
-                        </tr>
-
-                        <tr>
                             <td>Offline Mode</td>
                             <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
                         <tr>
-                            <td>Biometric Unlock</td>
-                            <td className="cross comparison-column"></td>
-                            <td className="check comparison-column"></td>
-                        </tr>
-                        <tr>
                             <td>Community Support</td>
-                            <td className="cross comparison-column"></td>
+                            <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
                         <tr>
                             <td>Email Support</td>
-                            <td className="comparison-column">Slower</td>
+                            <td className="check comparison-column"></td>
                             <td className="check comparison-column"></td>
                         </tr>
                     </tbody>
