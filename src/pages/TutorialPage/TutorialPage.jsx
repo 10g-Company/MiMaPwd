@@ -5,6 +5,7 @@ import "./TutorialPage.css";
 // import topics here...
 import GetStarted from "./Topics/01GetStarted/GetStarted";
 import Record from "./Topics/03Record/Record";
+import ScrollToAnchor from "../../behaviors/ScrollToAnchor";
 
 // ?topic=id to link to the topic from other page
 
@@ -122,6 +123,7 @@ export default function TutorialPage() {
     const contentRef = useRef(null);
     const location = useLocation();
     const navigate = useNavigate();
+    const lastHash = useRef('');
 
     const [openTopics, setOpenTopics] = useState({});
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
@@ -157,30 +159,41 @@ export default function TutorialPage() {
         }
     }, [location.search, navigate]);
 
-    // Scroll to top when active topic changes
+    // Scroll to top when active topic changes and/or to the anchor if hash is present
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         const topicId = params.get("topic");
+        const hash = location.hash; // e.g. "#one"
+
         if (!topicId) return;
 
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
-                const header = document.querySelector("Header"); // adjust selector if needed
+                const header = document.querySelector("Header");
                 const headerHeight = header ? header.offsetHeight : 0;
 
-                const el = contentRef.current;
+                if (hash) {
+                    // Scroll to the anchor target
+                    const target = document.querySelector(hash);
+                    if (target) {
+                        const y = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                        return;
+                    }
+                }
 
+                // Fallback: scroll to the top of content
+                const el = contentRef.current;
                 if (el) {
-                    // Scroll so that content top is just below header
                     const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
                     window.scrollTo({ top: y, behavior: "smooth" });
                 } else {
-                    // Fallback to page top
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 }
             });
         });
-    }, [location.search]);
+    }, [location.search, location.hash]);
+
 
 
 
@@ -208,25 +221,27 @@ export default function TutorialPage() {
     const Content = activeContent || (() => <div>Select a topic</div>);
 
     return (
-        <div className="tutorial-page">
-            {/* Mobile TOC toggle button */}
-            <button
-                className="toc-toggle-btn"
-                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
-            >
-                {isMobileTocOpen ? "Close TOC" : "Open TOC"}
-            </button>
+        <>
+            <div className="tutorial-page">
+                {/* Mobile TOC toggle button */}
+                <button
+                    className="toc-toggle-btn"
+                    onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+                >
+                    {isMobileTocOpen ? "Close TOC" : "Open TOC"}
+                </button>
 
-            {/* Sidebar TOC */}
-            <aside className={`toc ${isMobileTocOpen ? "open" : ""}`}>
-                <h2>Table of Contents</h2>
-                <ul>{tocData.map(renderToc)}</ul>
-            </aside>
+                {/* Sidebar TOC */}
+                <aside className={`toc ${isMobileTocOpen ? "open" : ""}`}>
+                    <h2>Table of Contents</h2>
+                    <ul>{tocData.map(renderToc)}</ul>
+                </aside>
 
-            {/* Content Area */}
-            <main className="content" ref={contentRef}>
-                <Content />
-            </main>
-        </div>
+                {/* Content Area */}
+                <main className="content" ref={contentRef}>
+                    <Content />
+                </main>
+            </div>
+        </>
     );
 }
