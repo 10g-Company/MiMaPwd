@@ -9,7 +9,7 @@ import { HiCurrencyDollar } from "react-icons/hi2";
 
 function FaqPagePage() {
     useEffect(() => {
-        document.title = "FAQ";
+        document.title = "MiMaPwd - FAQ";
     }, []); // Empty dependency array = runs once on mount
 
     return (

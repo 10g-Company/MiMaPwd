@@ -1,16 +1,232 @@
-import { useEffect } from 'react';
-import './TutorialPage.css';
+﻿import React, { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import "./TutorialPage.css";
 
-function TutorialPage() {
-    useEffect(() => {
-        document.title = "Get Started";
-    }, []); // Empty dependency array = runs once on mount
+// import topics here...
+import GetStarted from "./Topics/01GetStarted/GetStarted";
+import Record from "./Topics/03Record/Record";
+
+// ?topic=id to link to the topic from other page
+
+// TOC with sub-subtopics
+const tocData = [
+    {
+        id: "get-started",
+        title: "Get Started",
+        component: GetStarted
+    },
+    {
+        id: "app-settings", title: "App Settings",
+        subtopics: [
+            { id: "general", title: "General" },
+            { id: "vault", title: "Vault" },
+            { id: "data", title: "Data" },
+            { id: "security", title: "Security" },
+            { id: "others", title: "Others" },
+        ]
+    },
+    {
+        id: "record", title: "Record", component: Record
+    }
+    //{
+    //    id: "getting-started",
+    //    title: "Getting Started",
+    //    subtopics: [
+    //        { id: "installation", label: "Installation", component: Installation },
+    //        {
+    //            id: "first-component",
+    //            label: "First Component",
+    //            subtopics: [
+    //                { id: "functional-comp", label: "Functional Component", component: FirstComponent },
+    //                { id: "class-comp", label: "Class Component", component: JSXBasics },
+    //            ],
+    //        },
+    //    ],
+    //},
+];
+
+// === Helpers ===
+function findPath(items, targetId, path = []) {
+    for (const item of items) {
+        if (item.id === targetId) return [...path, item.id];
+        if (item.subtopics) {
+            const subPath = findPath(item.subtopics, targetId, [...path, item.id]);
+            if (subPath.length) return subPath;
+        }
+    }
+    return [];
+}
+
+function getItemById(items, targetId) {
+    for (const item of items) {
+        if (item.id === targetId) return item;
+        if (item.subtopics) {
+            const found = getItemById(item.subtopics, targetId);
+            if (found) return found;
+        }
+    }
+    return null;
+}
+
+function scrollAllAncestorsToTop(el) {
+    if (!el) return;
+
+    // Scroll element itself if it's scrollable
+    try {
+        if (el.scrollHeight > el.clientHeight) el.scrollTop = 0;
+    } catch (e) { }
+
+    // Walk up and clear scrollTop on any scrollable ancestor
+    let node = el.parentElement;
+    while (node && node !== document.body) {
+        const style = window.getComputedStyle(node);
+        const overflowY = style.overflowY;
+        const isScrollable = node.scrollHeight > node.clientHeight &&
+            /auto|scroll|overlay/.test(overflowY);
+        if (isScrollable) {
+            try { node.scrollTop = 0; } catch (e) { }
+        }
+        node = node.parentElement;
+    }
+
+    // Also clear document scroll (html/body)
+    try { document.documentElement.scrollTop = 0; } catch (e) { }
+    try { document.body.scrollTop = 0; } catch (e) { }
+}
+
+// === Recursive TOC Renderer ===
+function TocItem({ item, openTopics, activeId, handleClick, renderSubtopics }) {
+    const isOpen = openTopics[item.id];
+    const isActive = activeId === item.id;
 
     return (
-        <>
-            <h1>Hello World !!! </h1>
-        </>
+        <li>
+            <div
+                className={`topic ${isActive ? "active" : ""}`}
+                onClick={() => handleClick(item)}
+            >
+                <span>{item.title}</span>
+                {item.subtopics && (
+                    <span className="arrow">{isOpen ? "▼" : "▶"}</span>
+                )}
+            </div>
+            {item.subtopics && isOpen && (
+                <ul>{item.subtopics.map((sub) => renderSubtopics(sub))}</ul>
+            )}
+        </li>
     );
 }
 
-export default TutorialPage;
+// === Main Tutorial Page ===
+export default function TutorialPage() {
+    const contentRef = useRef(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const [openTopics, setOpenTopics] = useState({});
+    const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
+    const [activeContent, setActiveContent] = useState(null);
+    const [activeId, setActiveId] = useState(null);
+
+    // Load from URL or fallback to default
+    useEffect(() => {
+        document.title = "MiMaPwd - Tutorial"
+
+        const params = new URLSearchParams(location.search);
+        let topicId = params.get("topic");
+
+        if (!topicId) {
+            topicId = "get-started"; // ✅ default topic
+            navigate(`?topic=${topicId}`, { replace: true });
+            return;
+        }
+
+        const path = findPath(tocData, topicId);
+        if (path.length) {
+            setOpenTopics((prev) => {
+                const updated = { ...prev };
+                path.forEach((pid) => (updated[pid] = true));
+                return updated;
+            });
+
+            const targetItem = getItemById(tocData, topicId);
+            if (targetItem?.component) {
+                setActiveContent(() => targetItem.component);
+                setActiveId(topicId);
+            }
+        }
+    }, [location.search, navigate]);
+
+    // Scroll to top when active topic changes
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const topicId = params.get("topic");
+        if (!topicId) return;
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const header = document.querySelector("Header"); // adjust selector if needed
+                const headerHeight = header ? header.offsetHeight : 0;
+
+                const el = contentRef.current;
+
+                if (el) {
+                    // Scroll so that content top is just below header
+                    const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                } else {
+                    // Fallback to page top
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+            });
+        });
+    }, [location.search]);
+
+
+
+    // Handle TOC clicks
+    const handleClick = (item) => {
+        if (item.subtopics) {
+            setOpenTopics((prev) => ({ ...prev, [item.id]: !prev[item.id] }));
+        } else {
+            navigate(`?topic=${item.id}`); // ✅ update URL
+            setIsMobileTocOpen(false);     // close sidebar on mobile
+        }
+    };
+
+    const renderToc = (item) => (
+        <TocItem
+            key={item.id}
+            item={item}
+            openTopics={openTopics}
+            activeId={activeId}
+            handleClick={handleClick}
+            renderSubtopics={renderToc}
+        />
+    );
+
+    const Content = activeContent || (() => <div>Select a topic</div>);
+
+    return (
+        <div className="tutorial-page">
+            {/* Mobile TOC toggle button */}
+            <button
+                className="toc-toggle-btn"
+                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+            >
+                {isMobileTocOpen ? "Close TOC" : "Open TOC"}
+            </button>
+
+            {/* Sidebar TOC */}
+            <aside className={`toc ${isMobileTocOpen ? "open" : ""}`}>
+                <h2>Table of Contents</h2>
+                <ul>{tocData.map(renderToc)}</ul>
+            </aside>
+
+            {/* Content Area */}
+            <main className="content" ref={contentRef}>
+                <Content />
+            </main>
+        </div>
+    );
+}

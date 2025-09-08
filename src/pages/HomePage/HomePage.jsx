@@ -178,7 +178,7 @@ function HomePage() {
             
             <section className="section altcolor" id="help">
                 <h2>Get Started</h2>
-                <p>Visit our <Link to="/get-started">tutorial</Link> to learn how to use the app</p>
+                <p>Visit our <Link to="/tutorial">tutorial</Link> to learn how to use the app</p>
                 <br /><br />
                 <h2>FAQ</h2>
                 <p>Check out some <Link to="/faq">frequently asked questions</Link>.</p>

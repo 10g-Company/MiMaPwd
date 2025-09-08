@@ -4,7 +4,7 @@ import { FcKey } from "react-icons/fc";
 
 function PrivacyPolicyPage() {
     useEffect(() => {
-        document.title = "Privacy Policy";
+        document.title = "MiMaPwd - Privacy Policy";
     }, []); // Empty dependency array = runs once on mount
 
     return (

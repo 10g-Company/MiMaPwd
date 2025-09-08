@@ -5,6 +5,8 @@
     --page-background-alt: #f8f9fa;
     --dark-gray: #343a40;
     --dark-gray-text: #adb5bd;
+    --logo-blue: #0096ff;
+    --logo-red: #ff0000;
 }
 
 /* CSS Reset and General Styles */
@@ -231,8 +233,9 @@ h1.page-title{
 ul.check-list,
 ul.shield-list,
 ul.bullet-list,
-ol.number-list, 
-ol.alpha-list {
+ol.number-list,
+ol.alpha-list, 
+ol.roman-list {
     list-style: none; /* Hides default bullets */
     display: flex;
     flex-direction: column;
@@ -248,15 +251,21 @@ ol.alpha-list {
     counter-reset: alpha;
 }
 
-    ul.check-list li,
-    ul.shield-list li,
-    ul.bullet-list li,
-    ol.number-list li {
-        color: #555;
-        text-align: left;
-        position: relative;
-        padding-left: 1.8em;
-    }
+ol.roman-list{
+    counter-reset: roman;
+}
+
+ul.check-list li,
+ul.shield-list li,
+ul.bullet-list li,
+ol.number-list li,
+ol.alpha-list li, 
+ol.roman-list li {
+    color: #555;
+    text-align: left;
+    position: relative;
+    padding-left: 1.8em;
+}
 
     ol.number-list > li {
         counter-increment: number;
@@ -266,12 +275,17 @@ ol.alpha-list {
         counter-increment: alpha;
     }
 
+    ol.roman-list > li {
+        counter-increment: roman;
+    }
+
         /* ---- Bullets ---- */
         ul.check-list li::before,
         ul.shield-list li::before,
         ul.bullet-list li::before,
         ol.number-list > li::before, 
-        ol.alpha-list > li::before {
+        ol.alpha-list > li::before, 
+        ol.roman-list > li::before {
             position: absolute;
             left: 0;
             width: 1.5em; /* 👈 reserved width */
@@ -296,6 +310,10 @@ ol.number-list > li::before {
 
 ol.alpha-list > li::before {
     content: counter(alpha, lower-alpha) ")"; /* a), b), c)... */
+}
+
+ol.roman-list > li::before {
+    content: counter(roman, lower-roman) "."; /* i. ii. iii. ... */
 }
 
 /* Identation */

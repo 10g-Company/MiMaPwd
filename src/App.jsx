@@ -27,7 +27,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/version-compare" element={<VersionComparePage />} />
                 <Route path="/faq" element={<FaqPagePage />} />
-                <Route path="/get-started" element={<TutorialPage />} />
+                <Route path="/tutorial" element={<TutorialPage />} />
                 <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 <Route path="/tnc" element={<TnCPage />} />
                 {/* Add more routes as needed */}

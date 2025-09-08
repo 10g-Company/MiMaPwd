@@ -1,0 +1,12 @@
+.note-container{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 15px 5px 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.note-icon-container{
+    font-weight:bold;
+    color: var(--logo-blue);
+}

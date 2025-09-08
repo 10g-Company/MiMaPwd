@@ -1,0 +1,134 @@
+/* Layout */
+.tutorial-page {
+    display: flex;
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    min-height: 0; /* safe for flexbox children */
+}
+
+ol.number-list{
+    gap: 1.5em;
+}
+
+.toc {
+    /*width: 250px;*/
+    background-color: #f7f7f7;
+    border-right: 1px solid #ddd;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+    .toc h2 {
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+
+    .toc ul {
+        list-style: none;
+        padding-left: 0.5em;
+    }
+
+    .toc li {
+        margin: 0.2em 0;
+        font-size:0.97em;
+    }
+
+    .toc .topic {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3em 0;
+    }
+
+    .toc ul ul {
+        padding-left: 1rem; /* indent nested levels */
+    }
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    /*overflow-y: auto;*/
+}
+    .content > section {
+        margin: 1em 0 1.5em 0;
+    }
+
+        .content > section:not(:last-of-type):after {
+            content: '';
+            display: block;
+            width: 100%; /* Adjust width as needed */
+            margin: 20px auto; /* Adjust spacing as needed */
+            border-bottom: 1px solid #ddd;
+        }
+
+    .content p{
+        margin:0.5em 0;
+    }
+
+    .content img{
+        display: block;
+        max-width: 250px;
+        margin-top: 0.5em;
+        border: 1px solid black;
+    }
+
+/* Active highlight */
+.topic.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 0.3em;
+}
+
+    .topic .arrow{
+        margin:0 0.5em;
+    }
+
+    .topic.active .arrow {
+        color: white;
+    }
+
+/* Mobile Button */
+.toc-toggle-btn {
+    display: none;
+    position: fixed;
+    top: 1em;
+    right: 1.5em;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tutorial-page {
+        flex-direction: column;
+    }
+
+    .toc {
+        position: fixed; /* make it stick */
+        top: 0;
+        left: -260px;
+        height: 100%;
+        width: 250px;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+        .toc.open {
+            left: 0;
+        }
+
+    .toc-toggle-btn {
+        display: block;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}

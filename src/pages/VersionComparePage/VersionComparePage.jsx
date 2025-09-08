@@ -5,7 +5,7 @@ import { MdLocalOffer } from "react-icons/md";
 
 function VersionComparePage() {
     useEffect(() => {
-        document.title = "Version Comparison";
+        document.title = "MiMaPwd - Version Comparison";
     }, []); // Empty dependency array = runs once on mount
 
     const { openPopup } = usePopup();

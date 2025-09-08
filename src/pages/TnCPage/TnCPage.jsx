@@ -4,7 +4,7 @@ import { FcKey } from "react-icons/fc";
 
 function TnCPage() {
     useEffect(() => {
-        document.title = "Terms & Conditions";
+        document.title = "MiMaPwd - Terms & Conditions";
     }, []); // Empty dependency array = runs once on mount
 
     return (
