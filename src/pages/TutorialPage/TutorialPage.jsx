@@ -5,7 +5,6 @@ import "./TutorialPage.css";
 // import topics here...
 import GetStarted from "./Topics/01GetStarted/GetStarted";
 import Record from "./Topics/03Record/Record";
-import ScrollToAnchor from "../../behaviors/ScrollToAnchor";
 
 // ?topic=id to link to the topic from other page
 
@@ -69,32 +68,6 @@ function getItemById(items, targetId) {
     return null;
 }
 
-function scrollAllAncestorsToTop(el) {
-    if (!el) return;
-
-    // Scroll element itself if it's scrollable
-    try {
-        if (el.scrollHeight > el.clientHeight) el.scrollTop = 0;
-    } catch (e) { }
-
-    // Walk up and clear scrollTop on any scrollable ancestor
-    let node = el.parentElement;
-    while (node && node !== document.body) {
-        const style = window.getComputedStyle(node);
-        const overflowY = style.overflowY;
-        const isScrollable = node.scrollHeight > node.clientHeight &&
-            /auto|scroll|overlay/.test(overflowY);
-        if (isScrollable) {
-            try { node.scrollTop = 0; } catch (e) { }
-        }
-        node = node.parentElement;
-    }
-
-    // Also clear document scroll (html/body)
-    try { document.documentElement.scrollTop = 0; } catch (e) { }
-    try { document.body.scrollTop = 0; } catch (e) { }
-}
-
 // === Recursive TOC Renderer ===
 function TocItem({ item, openTopics, activeId, handleClick, renderSubtopics }) {
     const isOpen = openTopics[item.id];
@@ -120,12 +93,28 @@ function TocItem({ item, openTopics, activeId, handleClick, renderSubtopics }) {
 
 // === Main Tutorial Page ===
 export default function TutorialPage() {
+
+    // Expand all topics & subtopics by default
+    const buildExpandedState = () => {
+        const state = {};
+        tocData.forEach((topic) => {
+            state[topic.id] = true; // expand each top-level topic
+            if (topic.subtopics) {
+                topic.subtopics.forEach((sub) => {
+                    state[sub.id] = true; // expand each subtopic too
+                });
+            }
+        });
+        return state;
+    };
+
     const contentRef = useRef(null);
     const location = useLocation();
     const navigate = useNavigate();
     const lastHash = useRef('');
 
-    const [openTopics, setOpenTopics] = useState({});
+    //const [openTopics, setOpenTopics] = useState({}); // use this if want to collapse all by default
+    const [openTopics, setOpenTopics] = useState(buildExpandedState);
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
     const [activeContent, setActiveContent] = useState(null);
     const [activeId, setActiveId] = useState(null);
@@ -193,9 +182,6 @@ export default function TutorialPage() {
             });
         });
     }, [location.search, location.hash]);
-
-
-
 
     // Handle TOC clicks
     const handleClick = (item) => {
