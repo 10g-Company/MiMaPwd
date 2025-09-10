@@ -1,3 +1,7 @@
+:root{
+    --phone-border-radius: 30px;
+}
+
 .smartphone-container {
     display: flex;
     justify-content: center;
@@ -10,7 +14,7 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    border-radius: 30px; /* Slightly less rounded corners */
+    border-radius: var(--phone-border-radius);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -34,7 +38,7 @@
     width: 100%;
     height: 100%;
     background-color: #121212;
-    border-radius: 20px;
+    border-radius: var(--phone-border-radius);
     overflow: hidden;
     position: relative;
 }
@@ -44,8 +48,8 @@
     height: 100%;
     object-fit: cover; /* Use cover to fill the screen */
     display: block;
-    border-radius: 20px;
-    padding: 8px;
+    border-radius: var(--phone-border-radius);
+    padding: 7px;
 }
 
 @media (max-width: 768px) {
@@ -54,7 +58,7 @@
     }
 
     .smartphone-frame {
-        border-radius: 20px;
+        /*border-radius: 20px;*/
     }
 
     .smartphone-notch-pill {

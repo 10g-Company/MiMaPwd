@@ -1,0 +1,16 @@
+.warning-container {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 15px 15px 5px 15px;
+    margin: 10px 0;
+    background-color: orangered;
+}
+
+.warning-icon-container {
+    font-weight: bold;
+    color: darkred;
+}
+
+.warning-child{
+    color:antiquewhite;
+}
