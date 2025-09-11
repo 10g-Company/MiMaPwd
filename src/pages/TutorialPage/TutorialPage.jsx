@@ -5,7 +5,10 @@ import "./TutorialPage.css";
 // import topics here...
 import GetStarted from "./Topics/01GetStarted/GetStarted";
 import Record from "./Topics/03Record/Record";
+import GeneralSetting from "./Topics/02AppSettings/GeneralSetting";
 import VaultSetting from "./Topics/02AppSettings/VaultSetting";
+import DataSetting from "./Topics/02AppSettings/DataSetting";
+import SecuritySetting from "./Topics/02AppSettings/SecuritySetting";
 
 // ?topic=id to link to the topic from other page
 
@@ -19,10 +22,10 @@ const tocData = [
     {
         id: "app-settings", title: "App Settings",
         subtopics: [
-            { id: "general", title: "General" },
+            { id: "general", title: "General", component: GeneralSetting },
             { id: "vault", title: "Vault", component: VaultSetting },
-            { id: "data", title: "Data" },
-            { id: "security", title: "Security" },
+            { id: "data", title: "Data", component: DataSetting },
+            { id: "security", title: "Security", component: SecuritySetting },
         ]
     },
     {

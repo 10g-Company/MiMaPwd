@@ -31,7 +31,7 @@ export default function GetStarted() {
                         <img src={getstarted_set_password} alt="Set Password" />
 
                         <Note>
-                            Must follow the <Link>Password Requirements</Link>
+                            Must follow the <Link to="/tutorial?topic=security#pwdrequirement">Password Requirements</Link>
                         </Note>
                     </li>
                     <li>
@@ -45,7 +45,7 @@ export default function GetStarted() {
                 <h3>Home Page</h3>
                 <img src={homepage_intro} alt="Home Page Intro" />
                 <ol className="alpha-list">
-                    <li>Go to the <Link>Setting Page</Link></li>
+                    <li>Go to the <Link to="/tutorial?topic=general">Setting Page</Link></li>
                     <li>
                         Search Panel
                         <Note>You must enter at least 3 characters</Note>

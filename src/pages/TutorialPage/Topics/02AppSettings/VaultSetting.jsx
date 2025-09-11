@@ -21,7 +21,7 @@ function VaultSetting() {
             <h1>Vault Setting</h1>
             <img className="topic_img" src={setting_vault} alt="Vault Setting" />
 
-            <section>
+            <section id="move_vault">
                 <h3>Rename/Move Vault</h3>
                 <p>Rename a vault's name or to move all records in a vault to another vault</p>
                 <ol className="number-list">

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import './Note.css';
 import { FaInfoCircle } from "react-icons/fa";
 
-const Note = ({ children }) => {
+const Note = ({ id, children }) => {
     
     return (
         <>
-            <div className="note-container">
+            <div id={id} className="note-container">
 
                 <div className="note-icon-container">
                     <FaInfoCircle className="react-icons" />NOTE:

@@ -9,4 +9,5 @@
 .note-icon-container{
     font-weight:bold;
     color: var(--logo-blue);
+    margin-bottom: 0.3em;
 }

@@ -3,14 +3,20 @@ import { Link } from 'react-router-dom';
 import Note from "../../../../components/Note/Note";
 
 import record_add from "../../../../assets/images/record-add.png";
+import record_edit from "../../../../assets/images/record-edit.png";
 import record_select_type from "../../../../assets/images/record-select_type.png";
 import record_save from "../../../../assets/images/record-save.png";
 import record_vault from "../../../../assets/images/record-vault.png";
 import record_vault_select from "../../../../assets/images/record-vault_select.png";
 import record_icon from "../../../../assets/images/record-icon.png";
 import record_icon_select from "../../../../assets/images/record-icon_select.png";
+import record_icon_delete from "../../../../assets/images/record-icon_delete.png";
+import record_icon_delete_confirm from "../../../../assets/images/record-icon_delete_confirm.png";
 import record_starred from "../../../../assets/images/record-starred.png";
 import record_image from "../../../../assets/images/record-image.png";
+import record_image_delete from "../../../../assets/images/record-image_delete.png";
+import record_image_delete_confirm from "../../../../assets/images/record-image_delete_confirm.png";
+import Warning from "../../../../components/Warning/Warning";
 
 export default function Record() {
     return (
@@ -40,7 +46,13 @@ export default function Record() {
                     </li>
                 </ol>
             </section>
-            
+
+            <section>
+                <h3>Edit existing record</h3>
+                When you view a record, click on the [Edit] button to edit the record.
+                <img src={record_edit} alt="Edit Record" />
+            </section>
+
             <section id="recordicon">
                 <h3>Record Icon</h3>
                 <ol className="number-list">
@@ -51,16 +63,26 @@ export default function Record() {
                     <li>
                         You can select from the existing icon list or use an image from your gallery.
                         <img src={record_icon_select} alt="Select Record Icon" />
+                        <Note>
+                            <ol className="alpha-list">
+                                <li>Image's aspect ratio must be 1:1 (same height and width)</li>
+                                <li>After you have added an icon from your gallery and saved your record, it will appear in the existing icon list</li>
+                            </ol>
+                        </Note>
+                    </li>
+                    <li>
+                        To delete a user-added icon, <b>long press</b> on the icon image.
+                        <img src={record_icon_delete} alt="Delete Record Icon" />
+                        <p>And slide to confirm</p>
+                        <img src={record_icon_delete_confirm} alt="Confirm Delete Record Icon" />
+
+                        <Warning>
+                            All records that are using this icon will be changed to the default icon.
+                        </Warning>
                     </li>
                 </ol>
 
-                <Note>
-                    <ol className="alpha-list">
-                        <li>Image's aspect ratio must be 1:1 (same height and width)</li>
-                        <li>After you have added an icon from your gallery and saved your record, it will appear in the existing icon list</li>
-                    </ol>
-                    
-                </Note>
+                
             </section>
 
             <section>
@@ -80,7 +102,7 @@ export default function Record() {
                     <ol className="alpha-list">
                         <li>The existing vault list is auto-generated based on all your records' assigned vault</li>
                         <li>When a new vault is created, and the record is saved. The new vault will be available for selection</li>
-                        <li>To change a vault's name, use the <Link>Rename/Move Vault</Link> feature in the [Setting Page]</li>
+                        <li>To change a vault's name, use the <Link to="/tutorial?topic=vault#move_vault">Rename/Move Vault</Link> feature in the [Setting Page]</li>
                         <li>
                             You don't need to delete empty vault. Once all records are moved/re-assigned to another vault, the empty vault
                             will be automatically removed from the vault list.
@@ -101,7 +123,7 @@ export default function Record() {
             </section>
 
             <section>
-                <h3>Add Image to Record</h3>
+                <h3>Image Attachment</h3>
                 <ol className="number-list">
                     <li>
                         You can add images to a record from the camera or pick from your gallery.
@@ -109,6 +131,12 @@ export default function Record() {
                         <Note>
                             <p>The images will have an additional layer of encryption</p>
                         </Note>
+                    </li>
+                    <li>
+                        To delete an image, <b>long press</b> on the image.
+                        <img src={record_image_delete} alt="Delete Image from Record" />
+                        And click [Yes] to confirm.
+                        <img src={record_image_delete_confirm} alt="Confirm Delete Image from Record" />
                     </li>
                 </ol>
             </section>

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import './Warning.css';
 import { TiWarning } from "react-icons/ti";
 
-const Warning = ({ children }) => {
+const Warning = ({ id, children }) => {
 
     return (
         <>
-            <div className="warning-container">
+            <div id={id} className="warning-container">
 
                 <div className="warning-icon-container">
                     <TiWarning className="react-icons" />Warning:
