@@ -1,0 +1,17 @@
+.article-container {
+    width: fit-content; /* Width adjusts to content */
+    /*margin-left: auto;*/ /* Pushes container to the right */
+    /*margin-right: 0;*/ /* Ensures no margin on the right */
+
+    font-size: 0.85rem;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.article-container .bullet-list{
+    margin: 0;
+    gap: 0.2em;
+    font-size: 1.1em;
+}

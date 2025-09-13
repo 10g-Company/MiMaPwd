@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Note from "../../../../components/Note/Note";
+import ArticleToc from "../../../../components/ArticleToc/ArticleToc";
 
 // import images
 import getstarted_1 from "../../../../assets/images/getstarted-1.png";
@@ -11,12 +12,21 @@ import homepage_filter from "../../../../assets/images/homepage-filter.png";
 import homepage_filter_summary from "../../../../assets/images/homepage-filter_summary.png";
 
 export default function GetStarted() {
+
+    const toc = [
+        { topic: "First App Launch", id: "firstlaunch" },
+        { topic: "Home Page", id: "homepage" },
+        
+    ];
+
     return (
         <>
             <h1>Get Started</h1>
 
-            <section>
-                <h3>Launching the app for the 1st time</h3>
+            <ArticleToc topics={toc} />
+
+            <section id="firstlaunch">
+                <h3>First App Launch</h3>
                 <p>
                     When you launch the app for the 1st time, you will need to set a <b>Master Password</b> and agree to
                     the <b>terms & conditions</b>.
@@ -45,7 +55,7 @@ export default function GetStarted() {
                 <h3>Home Page</h3>
                 <img src={homepage_intro} alt="Home Page Intro" />
                 <ol className="alpha-list">
-                    <li>Go to the <Link to="/tutorial?topic=general">Setting Page</Link></li>
+                    <li>Go to the <Link to="/tutorial?topic=security">Setting Page</Link></li>
                     <li>
                         Search Panel
                         <Note>You must enter at least 3 characters</Note>
@@ -90,7 +100,6 @@ export default function GetStarted() {
                     <li>Create <Link to="/tutorial?topic=record">New Record</Link></li>
                 </ol>
             </section>
-
            
         </>
     );

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Warning from "../../../../components/Warning/Warning";
 import Note from "../../../../components/Note/Note";
-import GeneralSetting from "./GeneralSetting";
+import ArticleToc from "../../../../components/ArticleToc/ArticleToc";
 
 import setting_data from "../../../../assets/images/setting-data.png";
 import setting_data_backup from "../../../../assets/images/setting-data_backup.png";
@@ -13,8 +13,19 @@ import setting_data_restore_confirm from "../../../../assets/images/setting-data
 import setting_data_wipe from "../../../../assets/images/setting-data-wipe.png";
 import setting_data_wipe_auth from "../../../../assets/images/setting-data-wipe_auth.png";
 import setting_data_wipe_confirm from "../../../../assets/images/setting-data-wipe_confirm.png";
+import setting_data_button_backup from "../../../../assets/images/setting-data-button-backup.png";
+import setting_data_button_restore from "../../../../assets/images/setting-data-button-restore.png";
+import setting_data_button_wipedata from "../../../../assets/images/setting-data-button-wipedata.png";
 
 function DataSetting() {
+
+    const toc = [
+        { topic: "Backup", id: "backup" },
+        { topic: "Auto Backup", id: "autobackup" },
+        { topic: "Restore", id: "restore" },
+        { topic: "Wipe All Data", id: "wipealldata" },
+    ];
+
     useEffect(() => {
         document.title = "Data Setting";
     }, []); // Empty dependency array = runs once on mount
@@ -22,14 +33,16 @@ function DataSetting() {
     return (
         <>
             <h1>Data Setting</h1>
-            <img className="topic_img" src={setting_data} alt="Data Setting" />
 
-            <section>
+            <ArticleToc topics={toc} />
+
+            <section id="backup">
                 <h3>Backup</h3>
+                <img className="no-border" src={setting_data_button_backup} alt="Backup button" />
                 <p>Create an encrypted backup file using your current password</p>
                 <ol className="number-list">
                     <li>
-                        If you haven't set a <Link to="/tutorial?topic=general#defaultfolder">Default folder</Link>, you will be prompted to select a folder to save the backup file
+                        If you haven't set a <Link to="/tutorial?topic=others#defaultfolder">Default folder</Link>, you will be prompted to select a folder to save the backup file
                     </li>
                     <li>
                         Click [YES] to create the backup file
@@ -42,12 +55,12 @@ function DataSetting() {
                 </Warning>
             </section>
 
-            <section>
+            <section id="autobackup">
                 <h3>Auto Backup</h3>
                 <ol className="number-list">
                     <li>
                         Whenever you make changes to your data, an automatic backup will be created in the background.
-                        The auto backup file will be saved in the <Link to="/tutorial?topic=general#defaultfolder">Default folder</Link> you
+                        The auto backup file will be saved in the <Link to="/tutorial?topic=others#defaultfolder">Default folder</Link> you
                         have set. If you didn't set a default folder, it will be save to the app's folder which is not accessible by user.
                     </li>
                     <li>
@@ -66,8 +79,9 @@ function DataSetting() {
                 </Note>
             </section>
 
-            <section>
+            <section id="restore">
                 <h3>Restore</h3>
+                <img className="no-border" src={setting_data_button_restore} alt="Restore button" />
                 <p>Restore data from your previous backup file</p>
                 <ol className="number-list">
                     <li>
@@ -98,8 +112,9 @@ function DataSetting() {
                 </ol>
             </section>
 
-            <section>
+            <section id="wipealldata">
                 <h3>Wipe All Data</h3>
+                <img className="no-border" src={setting_data_button_wipedata} alt="Wipe All Data button" />
                 <p>Delete all your data.</p>
                 <ol className="number-list">
                     <li>

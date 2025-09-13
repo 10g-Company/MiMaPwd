@@ -17,3 +17,7 @@
 ul.check-list{
     gap: 1.2em;
 }
+
+#help{
+    justify-content: space-evenly;
+}

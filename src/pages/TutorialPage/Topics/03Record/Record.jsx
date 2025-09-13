@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Note from "../../../../components/Note/Note";
+import Warning from "../../../../components/Warning/Warning";
+import ArticleToc from "../../../../components/ArticleToc/ArticleToc";
 
 import record_add from "../../../../assets/images/record-add.png";
 import record_edit from "../../../../assets/images/record-edit.png";
@@ -16,14 +18,30 @@ import record_starred from "../../../../assets/images/record-starred.png";
 import record_image from "../../../../assets/images/record-image.png";
 import record_image_delete from "../../../../assets/images/record-image_delete.png";
 import record_image_delete_confirm from "../../../../assets/images/record-image_delete_confirm.png";
-import Warning from "../../../../components/Warning/Warning";
+import record_delete from "../../../../assets/images/record-delete.png";
+import record_delete_confirm from "../../../../assets/images/record-delete_confirm.png";
+
+
 
 export default function Record() {
+
+    const toc = [
+        { topic: "Create new record", id: "newrecord" },
+        { topic: "Edit record", id: "editrecord" },
+        { topic: "Record Icon", id: "recordicon" },
+        { topic: "Assign Record to Vault", id: "recordvault" },
+        { topic: "Starred Record", id: "recordstarred" },
+        { topic: "Image Attachment", id: "recordimage" },
+        { topic: "Delete Record", id: "recorddelete" },
+    ];
+
     return (
         <>
             <h1>Record</h1>
 
-            <section>
+            <ArticleToc topics={toc} />
+
+            <section id="newrecord">
                 <h3>Create new record</h3>
                 <ol className="number-list">
                     <li>
@@ -47,7 +65,7 @@ export default function Record() {
                 </ol>
             </section>
 
-            <section>
+            <section id="editrecord">
                 <h3>Edit existing record</h3>
                 When you view a record, click on the [Edit] button to edit the record.
                 <img src={record_edit} alt="Edit Record" />
@@ -72,7 +90,7 @@ export default function Record() {
                     </li>
                     <li>
                         To delete a user-added icon, <b>long press</b> on the icon image.
-                        <img src={record_icon_delete} alt="Delete Record Icon" />
+                        <img src={record_icon_delete} alt="Delete Record Icon" /><br/>
                         <p>And slide to confirm</p>
                         <img src={record_icon_delete_confirm} alt="Confirm Delete Record Icon" />
 
@@ -85,7 +103,7 @@ export default function Record() {
                 
             </section>
 
-            <section>
+            <section id="recordvault">
                 <h3>Assign Record to a Vault</h3>
                 <ol className="number-list">
                     <li>
@@ -111,8 +129,8 @@ export default function Record() {
                 </Note>
             </section>
 
-            <section>
-                <h3>Starred the Record</h3>
+            <section id="recordstarred">
+                <h3>Starred Record</h3>
                 <ol className="number-list">
                     <li>
                         Click on the [Star] icon to mark the record as a favorite. Starred records will appear at the very top of the
@@ -122,7 +140,7 @@ export default function Record() {
                 </ol>
             </section>
 
-            <section>
+            <section id="recordimage">
                 <h3>Image Attachment</h3>
                 <ol className="number-list">
                     <li>
@@ -134,11 +152,23 @@ export default function Record() {
                     </li>
                     <li>
                         To delete an image, <b>long press</b> on the image.
-                        <img src={record_image_delete} alt="Delete Image from Record" />
+                        <img src={record_image_delete} alt="Delete Image from Record" /> <br/>
                         And click [Yes] to confirm.
                         <img src={record_image_delete_confirm} alt="Confirm Delete Image from Record" />
                     </li>
                 </ol>
+            </section>
+
+            <section id="recorddelete">
+                <h3>Delete Record</h3>
+                <p>
+                    To delete the record, Click on the [three dots] and click [Delete].
+                    <img src={record_delete} alt="Delete Record" />
+                </p> <br/>
+                <p>
+                    And swipe to confirm.
+                    <img src={record_delete_confirm} alt="Delete record confirmation" />
+                </p>
             </section>
         </>
     );

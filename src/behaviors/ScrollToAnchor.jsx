@@ -2,27 +2,42 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToAnchor() {
-    const location = useLocation();
-    const lastHash = useRef('');
+    //const location = useLocation();
+    //const lastHash = useRef('');
 
     useEffect(() => {
-        if (location.hash) {
-            lastHash.current = location.hash.slice(1); // Remove the '#' character
-        }
+        const params = new URLSearchParams(location.search);
+        const topicId = params.get("topic");
+        const hash = location.hash; // e.g. "#one"
 
-        if (lastHash.current && document.getElementById(lastHash.current)) {
-            setTimeout(() => {
-                const element = document.getElementById(lastHash.current);
-                if (element) {
-                    element.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        if (!topicId) return;
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const header = document.querySelector("Header");
+                const headerHeight = header ? header.offsetHeight : 0;
+
+                if (hash) {
+                    // Scroll to the anchor target
+                    const target = document.querySelector(hash);
+                    if (target) {
+                        const y = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                        return;
+                    }
                 }
-                lastHash.current = '';
-            }, 100);
-        }
-    }, [location]);
+
+                // Fallback: scroll to the top of content
+                const el = contentRef.current;
+                if (el) {
+                    const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+            });
+        });
+    }, [location.search, location.hash]);
 
     return null;
 }

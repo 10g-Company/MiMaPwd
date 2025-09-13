@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import './HomePage.css';
 import cloud_off_outline from '../../assets/images/cloud-off-outline.svg';
 import SmartphoneFrame from '../../components/SmartphoneFrame/SmartphoneFrame';
-import screenshot1 from '../../assets/images/dianhuo-home.png';
+import intro_homepage from '../../assets/images/intro-homepage.jpg';
+import intro_biometric from '../../assets/images/intro-biometric.jpg';
+import intro_record from '../../assets/images/intro-record.jpg';
+import intro_backup from '../../assets/images/intro-backup.jpg';
+import intro_autobackup from '../../assets/images/intro-autobackup.jpg';
+import intro_autolock from '../../assets/images/intro-autolock.jpg';
+import intro_selfdestruct from '../../assets/images/intro-selfdestruct.jpg';
+import intro_images from '../../assets/images/intro-images.jpg';
 
 function HomePage() {
     useEffect(() => {
@@ -14,7 +21,7 @@ function HomePage() {
         <>
             <section className="section feature-section" id="intro">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_homepage} />
                 </div>
                 <div className="feature-content">
                     <h1>Simplify Your Digital Life</h1>
@@ -60,7 +67,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_record} />
                 </div>
 
                 <div className="feature-content">
@@ -77,7 +84,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_biometric} />
                 </div>
                 <div className="feature-content">
                     <h2>👆 Biometric Login</h2>
@@ -89,7 +96,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_backup} />
                 </div>
                 <div className="feature-content">
                     <h2>💾 Backup & Restore with Protection</h2>
@@ -105,7 +112,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_autobackup} />
                 </div>
                 <div className="feature-content">
                     <h2>🔄 Auto Backup</h2>
@@ -122,7 +129,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_autolock} />
                 </div>
                 <div className="feature-content">
                     <h2>⏳ Auto-Lock for Safety</h2>
@@ -135,7 +142,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_selfdestruct} />
                 </div>
                 <div className="feature-content">
                     <h2>💣 Self-Destruct Option</h2>
@@ -149,7 +156,7 @@ function HomePage() {
 
             <section className="feature-section altcolor">
                 <div className="feature-phone">
-                    <SmartphoneFrame media={screenshot1} />
+                    <SmartphoneFrame media={intro_images} />
                 </div>
                 <div className="feature-content">
                     <h2>🖼️ More Than Text</h2>
@@ -177,22 +184,31 @@ function HomePage() {
             </section>
             
             <section className="section altcolor" id="help">
-                <h2>Get Started</h2>
-                <p>Visit our <Link to="/tutorial">tutorial</Link> to learn how to use the app</p>
-                <br /><br />
-                <h2>FAQ</h2>
-                <p>Check out some <Link to="/faq">frequently asked questions</Link>.</p>
-                <br/><br/>
-                <h2>Need Help?</h2>
-                <p>
-                    If you have any questions or are running into issues or want to request new features,
-                    please visit our <a href="https://github.com/10g-Company/MiMaPwd/issues" target="_blank">forum</a>
-                </p>
-                <br /><br />
-                <h2>Contact Us?</h2>
-                <p>
-                    You can contact us via the app. In the app, go to [Settings] {"->"} [Report Issue]
-                </p>
+                <div>
+                    <h2>Get Started</h2>
+                    <p>Visit our <Link to="/tutorial">tutorial</Link> to learn how to use the app</p>
+                </div>
+                
+                <div>
+                    <h2>FAQ</h2>
+                    <p>Check out some <Link to="/faq">frequently asked questions</Link>.</p>
+                </div>
+
+                <div>
+                    <h2>Need Help?</h2>
+                    <p>
+                        If you have any questions or are running into issues or want to request new features,
+                        please visit our <a href="https://github.com/10g-Company/MiMaPwd/issues" target="_blank">forum</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Contact Us?</h2>
+                    <p>
+                        You can contact us via the app. In the app, go to [Settings] {">"} [Contact Us]
+                    </p>
+                </div>
+                
             </section>
         </>
     )

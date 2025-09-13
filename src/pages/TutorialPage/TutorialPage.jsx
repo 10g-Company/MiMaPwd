@@ -22,10 +22,11 @@ const tocData = [
     {
         id: "app-settings", title: "App Settings",
         subtopics: [
-            { id: "general", title: "General", component: GeneralSetting },
+            /*{ id: "general", title: "General", component: GeneralSetting },*/
             { id: "vault", title: "Vault", component: VaultSetting },
             { id: "data", title: "Data", component: DataSetting },
             { id: "security", title: "Security", component: SecuritySetting },
+            { id: "others", title: "Others", component: GeneralSetting },
         ]
     },
     {

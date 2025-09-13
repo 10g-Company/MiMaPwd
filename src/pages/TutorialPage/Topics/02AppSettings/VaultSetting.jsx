@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Warning from "../../../../components/Warning/Warning";
 import Note from "../../../../components/Note/Note";
+import ArticleToc from "../../../../components/ArticleToc/ArticleToc";
 
 import setting_vault from "../../../../assets/images/setting-vault.png";
+import setting_vault_rename from "../../../../assets/images/setting-vault-rename.png";
+import setting_vault_deletevault from "../../../../assets/images/setting-vault-delete.png";
 import setting_vault_from from "../../../../assets/images/setting-vault_from.png";
 import setting_vault_to from "../../../../assets/images/setting-vault_to.png";
 import setting_vault_confirm from "../../../../assets/images/setting-vault_confirm.png";
@@ -11,7 +14,13 @@ import setting_vault_delete from "../../../../assets/images/setting-vault_delete
 import setting_vault_delete_auth from "../../../../assets/images/setting-vault_delete_auth.png";
 import setting_vault_delete_confirm from "../../../../assets/images/setting-vault_delete_confirm.png";
 
+
 function VaultSetting() {
+    const toc = [
+        { topic: "Rename/Move Vault", id: "move_vault" },
+        { topic: "Delete Vault", id: "deletevault" },
+    ];
+
     useEffect(() => {
         document.title = "Vault Setting";
     }, []); // Empty dependency array = runs once on mount
@@ -19,10 +28,12 @@ function VaultSetting() {
     return (
         <>
             <h1>Vault Setting</h1>
-            <img className="topic_img" src={setting_vault} alt="Vault Setting" />
+
+            <ArticleToc topics={toc} />
 
             <section id="move_vault">
                 <h3>Rename/Move Vault</h3>
+                <img className="no-border" src={setting_vault_rename} alt="Vault rename" />
                 <p>Rename a vault's name or to move all records in a vault to another vault</p>
                 <ol className="number-list">
                     <li>
@@ -45,8 +56,9 @@ function VaultSetting() {
                 </ol>
             </section>
 
-            <section>
+            <section id="deletevault">
                 <h3>Delete Vault</h3>
+                <img className="no-border" src={setting_vault_deletevault} alt="Vault delete" />
                 <p>Delete a vault and all the records in that vault</p>
                 <ol className="number-list">
                     <li>
