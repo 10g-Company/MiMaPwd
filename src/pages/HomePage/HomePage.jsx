@@ -11,6 +11,7 @@ import intro_autobackup from '../../assets/images/intro-autobackup.jpg';
 import intro_autolock from '../../assets/images/intro-autolock.jpg';
 import intro_selfdestruct from '../../assets/images/intro-selfdestruct.jpg';
 import intro_images from '../../assets/images/intro-images.jpg';
+import intro_record_types from '../../assets/images/intro-recordTypes.jpg';
 
 function HomePage() {
     useEffect(() => {
@@ -163,6 +164,33 @@ function HomePage() {
                     <p>
                         Store not only usernames and passwords but also encrypted images in your records—perfect for secure storage of
                         ID cards, recovery codes, QR codes, or other sensitive visuals.
+                    </p>
+                </div>
+            </section>
+
+            <section className="feature-section altcolor">
+                <div className="feature-phone">
+                    <SmartphoneFrame media={intro_record_types} />
+                </div>
+                <div className="feature-content">
+                    <h2>🗂️ Organized Record Types</h2>
+                    <p>
+                        With built-in record types, you can easily store and manage your data the way it’s meant to be.
+                    </p>
+                    <p className="identlvl2">
+                        <u>Available types include:</u><br/>
+                        <ul className="bullet-list" style={{display: 'inline-flex'}}>
+                            <li>Bank Account</li>
+                            <li>Credit Card</li>
+                            <li>Email</li>
+                            <li>Passport</li>
+                            <li>Web Login</li>
+                            <li>... and many more</li>
+                        </ul>
+                    </p>
+                    
+                    <p>
+                        Each type comes with predefined fields so you can quickly enter and retrieve the information you need without hassle.
                     </p>
                 </div>
             </section>

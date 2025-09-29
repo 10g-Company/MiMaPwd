@@ -1,5 +1,5 @@
 :root{
-    --phone-border-radius: 30px;
+    --phone-border-radius: 3.5vh;
 }
 
 .smartphone-container {
@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 600px; /* default size */
+    height: 70vh; /* default size: 600px/650 */
 }
 
 .smartphone-frame {
@@ -23,12 +23,12 @@
 }
 
 .smartphone-notch-pill {
-    width: 12px; /* Width of the pill-shaped notch */
-    height: 12px; /* Height of the pill-shaped notch */
+    width: 1.6vh; /* Width of the pill-shaped notch {16px} */
+    height: 1.6vh; /* Height of the pill-shaped notch */
     background-color: #000;
-    border-radius: 10px;
+    border-radius: 1.6vh;
     position: absolute;
-    top: 12px;
+    top: 1.8%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -49,10 +49,15 @@
     object-fit: cover; /* Use cover to fill the screen */
     display: block;
     border-radius: var(--phone-border-radius);
-    padding: 7px;
+    padding: 0.8vh;
 }
 
 @media (max-width: 768px) {
+    :root {
+        /* New value for screens up to 768px wide */
+        --phone-border-radius: 2.7vh;
+    }
+
     .smartphone-container {
         height: 50vh;
     }
@@ -62,12 +67,12 @@
     }
 
     .smartphone-notch-pill {
-        width: 10px; /* Width of the pill-shaped notch */
-        height: 10px; /* Height of the pill-shaped notch */
-        top: 8px;
+        width: 1.3vh;  
+        height: 1.3vh; 
+        top: 1.9%;
     }
 
     .smartphone-media{
-        padding: 6px;
+        padding: 0.6vh;
     }
 }
