@@ -176,19 +176,21 @@ function HomePage() {
                     <h2>🗂️ Organized Record Types</h2>
                     <p>
                         With built-in record types, you can easily store and manage your data the way it’s meant to be.
-                    </p>
-                    <p className="identlvl2">
-                        <u>Available types include:</u><br/>
-                        <ul className="bullet-list" style={{display: 'inline-flex'}}>
-                            <li>Bank Account</li>
-                            <li>Credit Card</li>
-                            <li>Email</li>
-                            <li>Passport</li>
-                            <li>Web Login</li>
-                            <li>... and many more</li>
-                        </ul>
+                        <br /><br/>
+                        <u>Available types include:</u><br />
                     </p>
                     
+                    <ul className="bullet-list " style={{ display: 'inline-flex' }}>
+                        <li>Bank Account</li>
+                        <li>Credit Card</li>
+                        <li>Email</li>
+                        <li>Passport</li>
+                        <li>Web Login</li>
+                        <li>... and many more</li>
+                    </ul>
+
+                    <br /><br/>
+
                     <p>
                         Each type comes with predefined fields so you can quickly enter and retrieve the information you need without hassle.
                     </p>

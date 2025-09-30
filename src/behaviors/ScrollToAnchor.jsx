@@ -1,21 +1,37 @@
-import { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+﻿import { useEffect } from 'react';
+import { useLocation, useNavigationType, NavigationType } from 'react-router-dom';
 
 function ScrollToAnchor() {
-    //const location = useLocation();
-    //const lastHash = useRef('');
+
+    const location = useLocation();
+    // 👈 Get the navigation type (POP, PUSH, REPLACE)
+    const navigationType = useNavigationType(); 
 
     useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const topicId = params.get("topic");
+
         const hash = location.hash; // e.g. "#one"
 
-        if (!topicId) return;
+        // --- 1. Determine if we should SCROLL ---
+        // A. If it's a PUSH/REPLACE (forward navigation), we always scroll to top or anchor.
+        // B. If it's a POP (back/forward) BUT there is a hash, it means the user 
+        //    either manually changed the URL or used a <Link to="#anchor"> that resulted in a POP. 
+        //    In this case, we MUST scroll to the anchor.
+        const shouldRunCustomScroll =
+            navigationType !== NavigationType.Pop || (navigationType === NavigationType.Pop && hash);
+
+        if (!shouldRunCustomScroll) {
+            console.log("Browser Back/Forward detected. Allowing browser to restore scroll position.");
+            return; // Exit and let the browser restore the position
+        }
+
+        console.log("entering ScrollToAnchor ...");
 
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 const header = document.querySelector("Header");
                 const headerHeight = header ? header.offsetHeight : 0;
+
+                console.log("hash value: ", hash);
 
                 if (hash) {
                     // Scroll to the anchor target
@@ -28,16 +44,11 @@ function ScrollToAnchor() {
                 }
 
                 // Fallback: scroll to the top of content
-                const el = contentRef.current;
-                if (el) {
-                    const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                } else {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                }
+                const y = headerHeight; // scroll just below header
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
         });
-    }, [location.search, location.hash]);
+    }, [location, navigationType]);
 
     return null;
 }

@@ -152,42 +152,44 @@ export default function TutorialPage() {
         }
     }, [location.search, navigate]);
 
+    //MOVE this to the <ScrollToAnchor>
     // Scroll to top when active topic changes and/or to the anchor if hash is present
-    useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const topicId = params.get("topic");
-        const hash = location.hash; // e.g. "#one"
+    //useEffect(() => {
+    //    const params = new URLSearchParams(location.search);
+    //    const topicId = params.get("topic");
+    //    const hash = location.hash; // e.g. "#one"
 
-        if (!topicId) return;
+    //    if (!topicId) return;
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                const header = document.querySelector("Header");
-                const headerHeight = header ? header.offsetHeight : 0;
+    //    requestAnimationFrame(() => {
+    //        requestAnimationFrame(() => {
+    //            const header = document.querySelector("Header");
+    //            const headerHeight = header ? header.offsetHeight : 0;
 
-                if (hash) {
-                    // Scroll to the anchor target
-                    const target = document.querySelector(hash);
-                    if (target) {
-                        const y = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-                        window.scrollTo({ top: y, behavior: "smooth" });
-                        return;
-                    }
-                }
+    //            if (hash) {
+    //                // Scroll to the anchor target
+    //                const target = document.querySelector(hash);
+    //                if (target) {
+    //                    const y = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+    //                    window.scrollTo({ top: y, behavior: "smooth" });
+    //                    return;
+    //                }
+    //            }
 
-                // Fallback: scroll to the top of content
-                const el = contentRef.current;
-                if (el) {
-                    const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                } else {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-            });
-        });
-    }, [location.search, location.hash]);
+    //            // Fallback: scroll to the top of content
+    //            const el = contentRef.current;
+    //            if (el) {
+    //                const y = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+    //                window.scrollTo({ top: y, behavior: "smooth" });
+    //            } else {
+    //                window.scrollTo({ top: 0, behavior: "smooth" });
+    //            }
+    //        });
+    //    });
+    //}, [location.search, location.hash]);
 
     // Handle TOC clicks
+
     const handleClick = (item) => {
         if (item.subtopics) {
             setOpenTopics((prev) => ({ ...prev, [item.id]: !prev[item.id] }));
