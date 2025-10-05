@@ -69,6 +69,13 @@ export default function Record() {
                 <h3>Edit existing record</h3>
                 When you view a record, click on the [Edit] button to edit the record.
                 <img src={record_edit} alt="Edit Record" />
+                <Note>
+                    <p>
+                        When you are in the <b>view</b> mode. You can long-press on a field to copy it to the clipboard.<br/>
+                        Example, in the above
+                        screenshot, long-press on "Vivan.Teng@example.com" and it will copy to the clipboard
+                    </p>
+                </Note>
             </section>
 
             <section id="recordicon">

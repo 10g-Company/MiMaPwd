@@ -13,7 +13,7 @@ function TnCPage() {
 
             <div className="page-body">
                 <p>
-                    <strong>Effective Date (UTC): </strong> August 30, 2025
+                    <strong>Effective Date (UTC): </strong> October 05, 2025
                 </p>
                 <br />
                 
@@ -169,7 +169,7 @@ function TnCPage() {
                             <ol className="alpha-list">
                                 <li>
                                     You may terminate this agreement at any time by uninstalling the App. Uninstalling the App will delete all
-                                    locally stored Content (not including your auto/manual backup files).
+                                    locally stored Content (not including your manual backup files).
                                 </li>
                                 <li>
                                     We reserve the right to terminate or suspend your access to the App (e.g., remove it from Google Play) if you

@@ -27,7 +27,7 @@ function VersionComparePage() {
 
             <div className="animated-banner">
                 <span className="offer-text"><MdLocalOffer className="offer-icon" /> Introductory Offer!</span>
-                <span className="original-price">SGD$19</span>
+                <span className="original-price">SGD$25</span>
                 <span className="new-price">Now SGD$12</span>
             </div>
 

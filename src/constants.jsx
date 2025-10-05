@@ -1,0 +1,1 @@
+export const GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=co.TENg.MiMaPwd";

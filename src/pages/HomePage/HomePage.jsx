@@ -1,6 +1,9 @@
 ﻿import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
+
+import { GOOGLE_PLAY_LINK } from '../../constants'
+
 import cloud_off_outline from '../../assets/images/cloud-off-outline.svg';
 import SmartphoneFrame from '../../components/SmartphoneFrame/SmartphoneFrame';
 import intro_homepage from '../../assets/images/intro-homepage.jpg';
@@ -30,7 +33,7 @@ function HomePage() {
                         <b>MiMaPwd</b> is a secure, privacy-first password manager that keeps all your credentials safe ONLY on Your Device.
                     </p>
                     <br/>
-                    <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
+                    <a href={GOOGLE_PLAY_LINK} target="_blank" className="cta-button">Get it on Google Play</a>
                 </div>
             </section>
             
@@ -43,7 +46,7 @@ function HomePage() {
                     <li>No monthly subscription fee. Just a one-time purchase - Simple. Affordable. No hidden costs.</li>
                 </ul>
                 <br/><br/>
-                <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
+                <a href={GOOGLE_PLAY_LINK} target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
 
             <section className="feature-section altcolor" id="features">
@@ -210,7 +213,7 @@ function HomePage() {
                 </ul>
                 <br />
                 <br/>
-                <a href="https://play.google.com/store/apps/details?id=your.app.package.name" target="_blank" className="cta-button">Get it on Google Play</a>
+                <a href={GOOGLE_PLAY_LINK} target="_blank" className="cta-button">Get it on Google Play</a>
             </section>
             
             <section className="section altcolor" id="help">

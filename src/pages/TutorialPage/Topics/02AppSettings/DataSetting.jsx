@@ -59,23 +59,21 @@ function DataSetting() {
                 <h3>Auto Backup</h3>
                 <ol className="number-list">
                     <li>
-                        Whenever you make changes to your data, an automatic backup will be created in the background.
-                        The auto backup file will be saved in the <Link to="/tutorial?topic=others#defaultfolder">Default folder</Link> you
-                        have set. If you didn't set a default folder, it will be save to the app's folder which is not accessible by user.
+                        Whenever you add or edit record, an automatic backup will be created in the background.
                     </li>
                     <li>
                         The main purpose of auto backup is to auto recover your data in case of critical system failure or database corruption.
                     </li>
                     <li>
-                        Auto backup will only keep the last 3 backup files. Older backup files will be automatically deleted.
+                        The auto backup files are not accessible to the user, but you can also use it to undo your last changes by restoring
+                        from the auto backup.
+                    </li>
+                    <li>
+                        Auto backup will only keep the <b>last 3</b> backup files. Older backup files will be automatically <b>deleted</b>.
                     </li>
                 </ol>
                 <Note>
-                    <ol className="alpha-list">
-                        <li>Do not rely solely on auto backup. It is recommended to also create manual backup files regularly.</li>
-                        <li>Do not rename the auto backup file or else, the auto recover will not be able to find the file.</li>
-                    </ol>
-                    
+                    Do not rely solely on auto backup as your main data backup. It is recommended to also create manual backup files regularly.
                 </Note>
             </section>
 
@@ -85,7 +83,7 @@ function DataSetting() {
                 <p>Restore data from your previous backup file</p>
                 <ol className="number-list">
                     <li>
-                        Click [Next] to select a backup file to restore
+                        Click [Next] to select a backup file to restore. Or you can select to restore from auto backup.
                         <img src={setting_data_restore} alt="Restore Data" />
                     </li>
                     <li>

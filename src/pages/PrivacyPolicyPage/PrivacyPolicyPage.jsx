@@ -13,7 +13,7 @@ function PrivacyPolicyPage() {
 
 
             <div className="page-body">
-                <p><strong>Last Updated (UTC): </strong> August 30, 2025</p>
+                <p><strong>Last Updated (UTC): </strong> October 05, 2025</p>
                 <br/>
                 <p>
                     Welcome! This Privacy Policy explains how the MiMaPwd app ("we," "our," or "the app") handles your information.
@@ -75,7 +75,7 @@ function PrivacyPolicyPage() {
                         How Do We Use Your Information?
                         <div className="h3-content">
                             Since we do not collect your data, we have nothing to use. Any data you enter into the app is used solely for the
-                            app's functionality on your device, such as auto-filling login forms at your direction.
+                            app's functionality on your device.
                         </div>
                     </li>
 
@@ -144,7 +144,7 @@ function PrivacyPolicyPage() {
                         What Happens If I Lose My Device? or Forget My Password?
                         <div className="h3-content">
                             <ul className="bullet-list">
-                                <li>Since we never collect your data, we cannot recover it for you.</li>
+                                <li>Since we never collect your data, <b>we cannot recover it for you</b>.</li>
                                 <li>Without your master password (or biometrics, if enabled), no one can access your data.</li>
                                 <li>If you created a backup, you can restore it on a new device.</li>
                             </ul>
