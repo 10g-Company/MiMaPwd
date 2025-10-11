@@ -1,5 +1,10 @@
 # <u>What's New</u>
 
+### Version: 1.0.4
+#### (2025-10-11 1500 UTC)
+01. Improved User Experience
+02. Minor Fixes
+-----
 ### Version: 1.0.2 
 #### (2025-10-07 1200 UTC)
 * Fixes font size not set correctly
