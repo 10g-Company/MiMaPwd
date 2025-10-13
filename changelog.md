@@ -1,5 +1,11 @@
 # <u>What's New</u>
 
+### Version: 1.0.5
+#### (Upcoming)
+1. When viewing a record, empty fields will be hidden. And when go into edit mode, it will show all fields
+2. Stability & Performance Updates
+
+-----
 ### Version: 1.0.4
 #### (2025-10-11 1500 UTC)
 1. Improved User Experience
