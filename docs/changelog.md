@@ -1,5 +1,11 @@
 # <u>What's New</u>
 
+### Version: 1.0.8
+#### (2025-10-21 1100 UTC)
+1. Masked the password field in [Membership]
+2. Improved User Experience
+
+-----
 ### Version: 1.0.6
 #### (2025-10-14 0515 UTC)
 1. When viewing a record, empty fields will be hidden. And when go into edit mode, it will show all fields
