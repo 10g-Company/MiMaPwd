@@ -1,5 +1,12 @@
 # <u>What's New</u>
 
+### Version: 1.1.5
+#### (2026-01-12 0630 UTC)
+1. Support for Android 16
+2. Stability & Performance updates
+3. Improved User Experience
+
+-----
 ### Version: 1.0.8
 #### (2025-10-21 1100 UTC)
 1. Masked the password field in [Membership]
