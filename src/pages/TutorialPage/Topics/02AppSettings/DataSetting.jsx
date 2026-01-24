@@ -42,7 +42,7 @@ function DataSetting() {
                 <p>Create an encrypted backup file using your current password</p>
                 <ol className="number-list">
                     <li>
-                        If you haven't set a <Link to="/tutorial?topic=others#defaultfolder">Default folder</Link>, you will be prompted to select a folder to save the backup file
+                        If you haven't set a <Link to="/tutorial?topic=general#defaultfolder">Default folder</Link>, you will be prompted to select a folder to save the backup file
                     </li>
                     <li>
                         Click [YES] to create the backup file

@@ -1,5 +1,12 @@
 # <u>What's New</u>
 
+### Version: 1.1.6
+#### (2026-01-24 0735 UTC)
+1. [NEW] Able to set dark theme in [Settings]
+2. Stability & Performance updates
+3. Improved User Experience
+
+-----
 ### Version: 1.1.5
 #### (2026-01-12 0630 UTC)
 1. Support for Android 16
