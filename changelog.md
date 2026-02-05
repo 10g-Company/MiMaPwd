@@ -1,5 +1,11 @@
 # <u>What's New</u>
+### Version: 1.1.7
+#### (2026-02-05 1230 UTC)
+1. Minor Fixes in record search
+2. Stability & Performance updates
+3. Improved User Experience
 
+-----
 ### Version: 1.1.6
 #### (2026-01-24 0735 UTC)
 1. [NEW] Able to set dark theme in [Settings]
