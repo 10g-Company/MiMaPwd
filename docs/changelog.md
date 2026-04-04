@@ -1,4 +1,11 @@
 # <u>What's New</u>
+### Version: 1.1.8
+#### (Upcoming)
+1. When disabling biometric login, prompt user to enter password to ensure user still remembers the password
+2. Stability & Performance updates
+3. Improved User Experience
+
+-----
 ### Version: 1.1.7
 #### (2026-02-05 1230 UTC)
 1. Minor Fixes in record search
