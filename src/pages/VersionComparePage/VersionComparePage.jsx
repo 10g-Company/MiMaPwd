@@ -26,9 +26,9 @@ function VersionComparePage() {
         <>
 
             <div className="animated-banner">
-                <span className="offer-text"><MdLocalOffer className="offer-icon" /> Introductory Offer!</span>
-                <span className="original-price">SGD$25</span>
-                <span className="new-price">Now SGD$12</span>
+                <span className="offer-text"><MdLocalOffer className="offer-icon" /> Promotion Offer!</span>
+                <span className="original-price">US$19.95</span>
+                <span className="new-price">Now US$4.95</span>
             </div>
 
             <h1 className="top-header"><span className="label basic">Basic</span> vs <span className="label pro">Pro</span></h1>
