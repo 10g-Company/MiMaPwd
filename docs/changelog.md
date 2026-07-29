@@ -1,4 +1,10 @@
 # <u>What's New</u>
+### Version: 1.1.9
+#### (2026-07-29 1200 UTC)
+1. Stability & Performance updates
+2. Improved User Experience
+
+-----
 ### Version: 1.1.8
 #### (2026-04-05 0550 UTC)
 1. When disabling biometric login, prompt user to enter password to ensure user still remembers the password
