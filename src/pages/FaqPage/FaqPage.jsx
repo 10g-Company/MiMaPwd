@@ -148,7 +148,7 @@ function FaqPagePage() {
             <section className="category">
                 <h2>Technical</h2>
 
-                <FaqItem question="What encryption standards does MiMaPwd use?">
+                <FaqItem id="encryption_standards" question="What encryption standards does MiMaPwd use?">
                     <p>MiMaPwd employs:</p>
                     <ul className="shield-list identlvl1">
                         <li>AES-256 encryption for the entire database</li>

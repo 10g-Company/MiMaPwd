@@ -83,6 +83,8 @@ function HomePage() {
                             It's like putting a safe inside a safe.
                         </li>
                     </ul>
+                    <br/>
+                    <Link className="cta-button" to="/faq#encryption_standards">More details</Link>
                 </div>
             </section>
 
@@ -109,6 +111,9 @@ function HomePage() {
                         <li>Move your data between devices without ever exposing it to the internet.</li>
                         <li>
                             Backups are password-protected, so even if stolen, they’re useless without your unique password to restore it.
+                        </li>
+                        <li>
+                            Integrity verification ensures backup files remain tamper-proof and secure.
                         </li>
                     </ul>
                 </div>
