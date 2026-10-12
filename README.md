@@ -8,7 +8,7 @@
 1. run `npm run dev` to run with Live Reloading
 1. run `npm run build` to build to docs folder
 
-[whatsnew]:https://10g-company.github.io/MiMaPwd/whats-new.html
+[whatsnew]:https://10g-company.github.io/MiMaPwd/changelog.html
 [appwebsite]:https://10g-company.github.io/MiMaPwd/
 [tutorialwebsite]:https://10g-company.github.io/MiMaPwd/tutorial?topic=get-started
 [faqwebsite]:https://10g-company.github.io/MiMaPwd/faq
