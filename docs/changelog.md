@@ -1,4 +1,10 @@
 # <u>What's New</u>
+### Version: 1.1.10
+#### (2026-11-26 0545 UTC)
+1. [bug fixed]: when backup a large data set, the encryption might corrupt the backup file.
+2. Under-the-hood updates for improved performance and stability.
+
+-----
 ### Version: 1.1.9
 #### (2026-07-29 1200 UTC)
 1. Stability & Performance updates
